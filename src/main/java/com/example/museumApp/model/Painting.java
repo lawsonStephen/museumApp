@@ -36,12 +36,12 @@ public class Painting {
         this.name = name;
     }
 
-    public int getYear() {
+    public int getPainting_year() {
         return painting_year;
     }
 
-    public void setYear(int year) {
-        this.painting_year = year;
+    public void setPainting_year(int painting_year) {
+        this.painting_year = painting_year;
     }
 
     public double getPainting_price() {
