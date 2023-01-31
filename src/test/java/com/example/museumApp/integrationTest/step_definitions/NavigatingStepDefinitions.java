@@ -1,4 +1,4 @@
-package com.example.museumApp.step_definitions;
+package com.example.museumApp.integrationTest.step_definitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
