@@ -54,15 +54,15 @@ INSERT INTO SCULPTURE (id, name, sculpture_year, sculpture_price, artist_id, mus
     (default, 'Pieta', 1499, 5, select id from artist where name='Michelangelo', select id from museum where name='St Peters Basilica'),
     (default, 'The Kiss', 1908, 5.5, (select id from artist where name='Klimt'), (select id from museum where name='Musée dOrsay')),
     (default, 'The Thinker', 1902, 1.3, (select id from artist where name='Rodin'), (select id from museum where name='Metropolitan Museum of Art')),
-    (default, 'Migrant Mother', 1936, 2.0, (select id from artist where name='Dorothea Lange'), (select id from museum where name='Smithsonian National Museum of American History')),
+    (default, 'Migrant Mother', 1936, 2.0, (select id from artist where name='Klimt'), (select id from museum where name='Smithsonian National Museum of American History')),
     (default, 'The Persistence of Memory', 1931, 4.5, (select id from artist where name='Dali'), (select id from museum where name='Museum of Modern Art')),
-    (default, 'Eagle', 1905, 1.8, (select id from artist where name='Brancusi'), (select id from museum where name='Smithsonian National Museum of American History')),
-    (default, 'Eiffel Tower', 1889, 3.2, (select id from artist where name='Gustave Eiffel'), (select id from museum where name='Smithsonian National Air and Space Museum')),
-    (default, 'Liberty Leading the People', 1830, 4.7, (select id from artist where name='Delacroix'), (select id from museum where name='Musée dOrsay')),
+    (default, 'Eagle', 1905, 1.8, (select id from artist where name='Pollock'), (select id from museum where name='Smithsonian National Museum of American History')),
+    (default, 'Eiffel Tower', 1889, 3.2, (select id from artist where name='Cezanne'), (select id from museum where name='Smithsonian National Air and Space Museum')),
+    (default, 'Liberty Leading the People', 1830, 4.7, (select id from artist where name='Munch'), (select id from museum where name='Musée dOrsay')),
     (default, 'Campbells Soup Cans', 1962, 9.0, (select id from artist where name='Warhol'), (select id from museum where name='Tate Modern')),
     (default, 'The Yellow Christ', 1889, 4.5, (select id from artist where name='Gauguin'), (select id from museum where name='Musée dOrsay')),
     (default, 'The Card Players', 1890-92, 7.5, (select id from artist where name='Cezanne'), (select id from museum where name='Musée dOrsay')),
-    (default, 'The Portrait of Adele Bloch-Bauer I', 1907, 8.0, (select id from artist where name='Klimt'), (select id from museum where name='Neue Galerie New York')),
+    (default, 'The Portrait of Adele Bloch-Bauer I', 1907, 8.0, (select id from artist where name='Klimt'), (select id from museum where name='Pergamon Museum')),
     (default, 'No. 61 (Brown and Bronze)', 1951, 5.0, (select id from artist where name='Pollock'), (select id from museum where name='Museum of Modern Art'));
 
 
@@ -77,9 +77,9 @@ INSERT INTO PAINTING (id, name, painting_year, painting_price, museum_id, artist
                         (default, 'Sistine Chapel Ceiling', 1512, 80, (SELECT id FROM museum WHERE name = 'Sistine Chapel'), (SELECT id FROM artist WHERE name = 'Michelangelo')),
                         (default, 'Wheatfield with Crows', 1890, 117, (SELECT id FROM museum WHERE name = 'Van Gogh Museum'), (SELECT id FROM artist WHERE name = 'Van Gogh')),
                         (default, 'Mona Lisa', 1517, 870, (SELECT id FROM museum WHERE name = 'Louvre'), (SELECT id FROM artist WHERE name = 'da Vinci')),
-                        (default, 'The Starry Night', 1889, 125, (SELECT id FROM museum WHERE name = 'MoMA'), (SELECT id FROM artist WHERE name = 'Van Gogh')),
-                        (default, 'The Persistence of Memory', 1931, 110, (SELECT id FROM museum WHERE name = 'MoMA'), (SELECT id FROM artist WHERE name = 'Dali')),
-                        (default, 'The Kiss', 1908, 90, (SELECT id FROM museum WHERE name = 'Belvedere Museum'), (SELECT id FROM artist WHERE name = 'Klimt')),
+                        (default, 'The Starry Night', 1889, 125, (SELECT id FROM museum WHERE name = 'Museum of Modern Art'), (SELECT id FROM artist WHERE name = 'Van Gogh')),
+                        (default, 'The Persistence of Memory', 1931, 110, (SELECT id FROM museum WHERE name = 'Museum of Modern Art'), (SELECT id FROM artist WHERE name = 'Dali')),
+                        (default, 'The Kiss', 1908, 90, (SELECT id FROM museum WHERE name = 'Hermitage Museum'), (SELECT id FROM artist WHERE name = 'Klimt')),
                         (default, 'Night Watch', 1642, 140, (SELECT id FROM museum WHERE name = 'Rijksmuseum'), (SELECT id FROM artist WHERE name = 'Rembrandt')),
                         (default, 'The School of Athens', 1510, 160, (SELECT id FROM museum WHERE name = 'Vatican Museums'), (SELECT id FROM artist WHERE name = 'Raphael'));
 
