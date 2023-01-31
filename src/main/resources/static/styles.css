@@ -93,3 +93,9 @@ nav a:hover {
     color: #EAEDF4;
     text-decoration-color: #D11067;
 }
+
+.paintings_image {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px 30px 0 30px;
+}
