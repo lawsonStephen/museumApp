@@ -1,12 +1,22 @@
-INSERT INTO MUSEUM (id, name, location) VALUES
-    (default, 'Prado', 'Madrid'),
-    (default, 'Louvre', 'Paris'),
-    (default, 'British Museum', 'London'),
-    (default, 'National Gallery', 'London'),
-    (default, 'Accademia', 'Florence'),
-    (default, 'St Peters Basilica', 'Vatican City'),
-    (default, 'Sistine Chapel', 'Vatican City'),
-    (default, 'Van Gogh Museum', 'Amsterdam');
+INSERT INTO MUSEUM VALUES
+    (default, 'images/prado.jpeg', 'Madrid','Prado'),
+    (default, 'images/louvre.jpeg', 'Paris', 'Louvre'),
+    (default, 'images/britishMuseum.jpeg','London','British Museum'),
+    (default, 'images/nationalGallery.jpeg', 'London','National Gallery'),
+    (default, 'images/accademia.jpeg','Florence','Accademia'),
+    (default, 'images/stPeter.jpeg','Vatican City','St Peters Basilica'),
+    (default, 'images/sistine.jpeg','Vatican City', 'Sistine Chapel'),
+    (default, 'images/vanGogh.jpeg','Amsterdam','Van Gogh Museum'),
+    (default, 'images/nationalHistory.jpeg','New York','American Museum of Natural History'),
+    (default, 'images/smithsonian.jpeg','Washington D.C.','Smithsonian National Museum of American History'),
+    (default, 'images/tateModern.jpeg','London','Tate Modern'),
+    (default, 'images/uffizi.jpeg','Florence','Uffizi Gallery'),
+    (default, 'images/hermitage.jpeg','St Petersburg','Hermitage Museum'),
+    (default, 'images/rijksmuseum.jpeg','Amsterdam','Rijksmuseum'),
+    (default, 'images/dOrsay.jpeg','Paris','Musee dOrsay'),
+    (default, 'images/moma.jpeg','New York','MOMA'),
+    (default, 'images/nmok.jpeg','Seoul','National Museum of Korea'),
+    (default, 'images/pergamon.jpeg','Berlin','Pergamon Museum');
 
 INSERT INTO ARTIST (id, name, birthplace, birth_year) VALUES
     (default, 'Michelangelo', 'Italy', 1475),
