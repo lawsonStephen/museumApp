@@ -22,26 +22,28 @@ import java.util.List;
 public class SculptureController {
     private final SculptureService sculptureService;
 
-    private final ArtistRepository artistRepository;
-
-    private final MuseumRepository museumRepository;
+//    private final ArtistRepository artistRepository;
+//
+//    private final MuseumRepository museumRepository;
 
     @Autowired
-    public SculptureController(SculptureService sculptureService, ArtistRepository artistRepository, MuseumRepository museumRepository){
+    public SculptureController(SculptureService sculptureService
+                          //     ArtistRepository artistRepository, MuseumRepository museumRepository
+    ){
         this.sculptureService = sculptureService;
-        this.artistRepository = artistRepository;
-        this.museumRepository = museumRepository;
+//        this.artistRepository = artistRepository;
+//        this.museumRepository = museumRepository;
     }
 
-    @ModelAttribute("artistList")
-    public List<Artist> getArtistList(){
-        return artistRepository.findAll();
-    }
-
-    @ModelAttribute("museumList")
-    public List<Museum> getMuseumList(){
-        return museumRepository.findAll();
-    }
+//    @ModelAttribute("artistList")
+//    public List<Artist> getArtistList(){
+//        return artistRepository.findAll();
+//    }
+//
+//    @ModelAttribute("museumList")
+//    public List<Museum> getMuseumList(){
+//        return museumRepository.findAll();
+//    }
 
     @GetMapping
     public ModelAndView get() {
