@@ -6,7 +6,22 @@ INSERT INTO MUSEUM (id, name, location) VALUES
     (default, 'Accademia', 'Florence'),
     (default, 'St Peters Basilica', 'Vatican City'),
     (default, 'Sistine Chapel', 'Vatican City'),
-    (default, 'Van Gogh Museum', 'Amsterdam');
+    (default, 'Van Gogh Museum', 'Amsterdam'),
+    (default, 'Metropolitan Museum of Art', 'New York'),
+    (default, 'American Museum of Natural History', 'New York'),
+    (default, 'Smithsonian National Museum of American History', 'Washington D.C.'),
+    (default, 'Smithsonian National Air and Space Museum', 'Washington D.C.'),
+    (default, 'Smithsonian National Museum of Natural History', 'Washington D.C.'),
+    (default, 'Tate Modern', 'London'),
+    (default, 'Uffizi Gallery', 'Florence'),
+    (default, 'Hermitage Museum', 'Saint Petersburg'),
+    (default, 'Rijksmuseum', 'Amsterdam'),
+    (default, 'Musée dOrsay', 'Paris'),
+    (default, 'Museum of Modern Art', 'New York'),
+    (default, 'National Museum of Korea', 'Seoul'),
+    (default, 'The National Museum of Western Art', 'Tokyo'),
+    (default, 'Pergamon Museum', 'Berlin'),
+    (default, 'Vatican Museums', 'Vatican City');
 
 INSERT INTO ARTIST (id, name, birthplace, birth_year) VALUES
     (default, 'Michelangelo', 'Italy', 1475),
@@ -14,19 +29,57 @@ INSERT INTO ARTIST (id, name, birthplace, birth_year) VALUES
     (default, 'Donatello', 'Italy', 1386),
     (default, 'Van Gogh', 'Netherlands', 1853),
     (default, 'Picasso', 'Spain', 1881),
-    (default, 'da Vinci', 'Italy', 1452);
+    (default, 'da Vinci', 'Italy', 1452),
+    (default, 'Rembrandt', 'Netherlands', 1606),
+    (default, 'Monet', 'France', 1840),
+    (default, 'Dali', 'Spain', 1904),
+    (default, 'Warhol', 'United States', 1928),
+    (default, 'Vermeer', 'Netherlands', 1632),
+    (default, 'Raphael', 'Italy', 1483),
+    (default, 'Gauguin', 'France', 1848),
+    (default, 'Titian', 'Italy', 1488),
+    (default, 'Munch', 'Norway', 1863),
+    (default, 'Matisse', 'France', 1869),
+    (default, 'Renoir', 'France', 1841),
+    (default, 'OKeeffe', 'United States', 1887),
+    (default, 'Klimt', 'Austria', 1862),
+    (default, 'Cezanne', 'France', 1839),
+    (default, 'Pollock', 'United States', 1912);
 
 INSERT INTO SCULPTURE (id, name, sculpture_year, sculpture_price, artist_id, museum_id) VALUES
     (default, 'David', 1501, 100, select id from artist where name='Michelangelo', select id from museum where name='Accademia'),
     (default, 'Saint Mark', 1411, 7.5, select id from artist where name='Donatello', select id from museum where name='Louvre'),
     (default, 'Thinker', 1904, 80, select id from artist where name='Rodin', select id from museum where name='Louvre'),
     (default, 'Dying Slave', 1516, 1.5, select id from artist where name='Michelangelo', select id from museum where name='Louvre'),
-    (default, 'Pieta', 1499, 5, select id from artist where name='Michelangelo', select id from museum where name='St Peters Basilica');
+    (default, 'Pieta', 1499, 5, select id from artist where name='Michelangelo', select id from museum where name='St Peters Basilica'),
+    (default, 'The Kiss', 1908, 5.5, (select id from artist where name='Klimt'), (select id from museum where name='Musée dOrsay')),
+    (default, 'The Thinker', 1902, 1.3, (select id from artist where name='Rodin'), (select id from museum where name='Metropolitan Museum of Art')),
+    (default, 'Migrant Mother', 1936, 2.0, (select id from artist where name='Dorothea Lange'), (select id from museum where name='Smithsonian National Museum of American History')),
+    (default, 'The Persistence of Memory', 1931, 4.5, (select id from artist where name='Dali'), (select id from museum where name='Museum of Modern Art')),
+    (default, 'Eagle', 1905, 1.8, (select id from artist where name='Brancusi'), (select id from museum where name='Smithsonian National Museum of American History')),
+    (default, 'Eiffel Tower', 1889, 3.2, (select id from artist where name='Gustave Eiffel'), (select id from museum where name='Smithsonian National Air and Space Museum')),
+    (default, 'Liberty Leading the People', 1830, 4.7, (select id from artist where name='Delacroix'), (select id from museum where name='Musée dOrsay')),
+    (default, 'Campbells Soup Cans', 1962, 9.0, (select id from artist where name='Warhol'), (select id from museum where name='Tate Modern')),
+    (default, 'The Yellow Christ', 1889, 4.5, (select id from artist where name='Gauguin'), (select id from museum where name='Musée dOrsay')),
+    (default, 'The Card Players', 1890-92, 7.5, (select id from artist where name='Cezanne'), (select id from museum where name='Musée dOrsay')),
+    (default, 'The Portrait of Adele Bloch-Bauer I', 1907, 8.0, (select id from artist where name='Klimt'), (select id from museum where name='Neue Galerie New York')),
+    (default, 'No. 61 (Brown and Bronze)', 1951, 5.0, (select id from artist where name='Pollock'), (select id from museum where name='Museum of Modern Art'));
+
 
 INSERT INTO PAINTING (id, name, painting_year, painting_price, museum_id, artist_id) VALUES
                         (default, 'Sunflowers', 1888, 100, SELECT id FROM museum WHERE name = 'Van Gogh Museum', SELECT id FROM artist WHERE name = 'Van Gogh'),
                         (default, 'Buste de femme', 1943, 10, SELECT id FROM museum WHERE name = 'Louvre', SELECT id FROM artist WHERE name = 'Picasso'),
                         (default, 'Sistine Chapel Ceiling', 1512, 80, select id from museum where name ='Sistine Chapel', select id from artist where name ='Michelangelo'),
                         (default, 'Wheatfield with Crows', 1890,  117, select id from museum where name ='Van Gogh Museum', select id from artist where name = 'Van Gogh'),
-                        (default, 'Mona Lisa', 1517, 870, select id from museum where name ='Louvre', select id from artist where name ='da Vinci');
+                        (default, 'Mona Lisa', 1517, 870, select id from museum where name ='Louvre', select id from artist where name ='da Vinci'),
+                        (default, 'Sunflowers', 1888, 100, (SELECT id FROM museum WHERE name = 'Van Gogh Museum'), (SELECT id FROM artist WHERE name = 'Van Gogh')),
+                        (default, 'Buste de femme', 1943, 10, (SELECT id FROM museum WHERE name = 'Louvre'), (SELECT id FROM artist WHERE name = 'Picasso')),
+                        (default, 'Sistine Chapel Ceiling', 1512, 80, (SELECT id FROM museum WHERE name = 'Sistine Chapel'), (SELECT id FROM artist WHERE name = 'Michelangelo')),
+                        (default, 'Wheatfield with Crows', 1890, 117, (SELECT id FROM museum WHERE name = 'Van Gogh Museum'), (SELECT id FROM artist WHERE name = 'Van Gogh')),
+                        (default, 'Mona Lisa', 1517, 870, (SELECT id FROM museum WHERE name = 'Louvre'), (SELECT id FROM artist WHERE name = 'da Vinci')),
+                        (default, 'The Starry Night', 1889, 125, (SELECT id FROM museum WHERE name = 'MoMA'), (SELECT id FROM artist WHERE name = 'Van Gogh')),
+                        (default, 'The Persistence of Memory', 1931, 110, (SELECT id FROM museum WHERE name = 'MoMA'), (SELECT id FROM artist WHERE name = 'Dali')),
+                        (default, 'The Kiss', 1908, 90, (SELECT id FROM museum WHERE name = 'Belvedere Museum'), (SELECT id FROM artist WHERE name = 'Klimt')),
+                        (default, 'Night Watch', 1642, 140, (SELECT id FROM museum WHERE name = 'Rijksmuseum'), (SELECT id FROM artist WHERE name = 'Rembrandt')),
+                        (default, 'The School of Athens', 1510, 160, (SELECT id FROM museum WHERE name = 'Vatican Museums'), (SELECT id FROM artist WHERE name = 'Raphael'));
 
