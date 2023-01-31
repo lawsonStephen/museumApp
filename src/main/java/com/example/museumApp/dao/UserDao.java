@@ -23,6 +23,46 @@ public class UserDao {
                     "user@email.com",
                     "password",
                     Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "2",
+                    "2",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "3",
+                    "3",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "4",
+                    "4",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "5",
+                    "5",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "6",
+                    "6",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "7",
+                    "7",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "8",
+                    "8",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+            ),
+            new User(
+                    "9",
+                    "9",
+                    Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
             )
     );
 
