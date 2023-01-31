@@ -11,6 +11,8 @@ public class MuseumAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MuseumAppApplication.class, args);
 
+		//testing pushing change to github
+
 		System.out.println();
 	}
 
