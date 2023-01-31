@@ -6,6 +6,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href=styles.css>
     <title>Sculpture</title>
 </head>
 <body>
