@@ -2,8 +2,10 @@ package com.example.museumApp.controllerTest;
 
 import com.example.museumApp.controller.PaintingController;
 import com.example.museumApp.controller.SculptureController;
+import com.example.museumApp.model.Artist;
 import com.example.museumApp.model.Painting;
 import com.example.museumApp.model.Sculpture;
+import com.example.museumApp.repository.SculptureRepository;
 import com.example.museumApp.service.SculptureService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

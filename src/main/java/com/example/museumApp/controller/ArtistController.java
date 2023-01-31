@@ -28,8 +28,7 @@ public class ArtistController {
     public ModelAndView get() {
         ModelAndView modelAndView = new ModelAndView("artists");
 
-        List<Artist> artists = artistService.
-                findAll();
+        List<Artist> artists = artistService.findAll();
 
         modelAndView.addObject("artists", artists);
 
