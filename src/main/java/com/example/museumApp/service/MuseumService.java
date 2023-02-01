@@ -10,4 +10,8 @@ public interface MuseumService {
     List<Museum> findAll();
 
     Museum findById(Long id);
+
+    List<Museum> findByName(String name);
+
+
 }

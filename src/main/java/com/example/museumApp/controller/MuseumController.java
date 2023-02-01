@@ -1,7 +1,11 @@
 package com.example.museumApp.controller;
 
+import com.example.museumApp.model.Artist;
 import com.example.museumApp.model.Museum;
+import com.example.museumApp.model.Sculpture;
+import com.example.museumApp.service.ArtistService;
 import com.example.museumApp.service.MuseumService;
+import com.example.museumApp.service.SculptureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -12,16 +16,21 @@ import javax.validation.Valid;
 import javax.websocket.server.PathParam;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/museum")
 public class MuseumController {
 
     private final MuseumService museumService;
+    private final SculptureService sculptureService;
+    private final ArtistService artistService;
 
     @Autowired
-    public MuseumController(MuseumService museumService){
+    public MuseumController(MuseumService museumService, SculptureService sculptureService, ArtistService artistService){
         this.museumService = museumService;
+        this.sculptureService = sculptureService;
+        this.artistService = artistService;
     }
 
     @GetMapping
@@ -91,4 +100,8 @@ public class MuseumController {
 
         return modelAndView;
     }
+
+
+
+
 }
