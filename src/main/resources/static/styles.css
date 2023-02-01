@@ -1,4 +1,3 @@
-
 .error {
     color: #ff0000;
 }
@@ -132,7 +131,7 @@ nav a:hover {
     width: auto;
     display: flex; /* block on top*/
     grid-auto-flow: column;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .left {
@@ -145,7 +144,7 @@ nav a:hover {
 }
 
 .left img {
-    height: 700px;
+    height: 600px;
 }
 
 .left p, h1, h2, h3, h4, p {
@@ -154,11 +153,13 @@ nav a:hover {
 
 .right {
     float: right;
-    width: 600px;
+    width: 550px;
     padding: 0 8px 0 8px;
     box-sizing: border-box;
     display: inline; /*contents */
+    text-align: left;
 }
+
 
 .paintings_main {
     text-align: center;
