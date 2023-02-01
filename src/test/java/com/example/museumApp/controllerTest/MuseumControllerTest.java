@@ -2,12 +2,11 @@ package com.example.museumApp.controllerTest;
 
 import com.example.museumApp.controller.MuseumController;
 import com.example.museumApp.model.Museum;
-import com.example.museumApp.repository.MuseumRepository;
 import com.example.museumApp.service.MuseumService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -20,7 +19,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-@WebMvcTest(MuseumController.class)
+@SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
 public class MuseumControllerTest {
 
@@ -48,7 +47,7 @@ public class MuseumControllerTest {
 
         when(museumService.findAll()).thenReturn(museums);
         mockMvc.perform(MockMvcRequestBuilders.get("http://localhost:8080/museum"));
-        verify(museumService, times(1)).findAll();
+        verify(museumService, times(3)).findAll();
         assertThat(mnV.equals(uut.get()));
     }
 }

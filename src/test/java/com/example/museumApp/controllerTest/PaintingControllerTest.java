@@ -1,13 +1,12 @@
 package com.example.museumApp.controllerTest;
 
 import com.example.museumApp.controller.PaintingController;
-import com.example.museumApp.model.Museum;
 import com.example.museumApp.model.Painting;
 import com.example.museumApp.service.PaintingService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -20,7 +19,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-@WebMvcTest(PaintingController.class)
+@SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
 public class PaintingControllerTest {
 
