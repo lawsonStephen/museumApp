@@ -3,6 +3,7 @@ package com.example.museumApp.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Entity;
+import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WikiArtPainting
@@ -57,11 +58,15 @@ public class WikiArtPainting
     }
 
     @Override
-    public String toString() {
-        return "WikiArtPainting{" +
-                "title='" + title + '\'' +
-                ", completitionYear='" + completitionYear + '\'' +
-                ", artistName='" + artistName + '\'' +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WikiArtPainting that = (WikiArtPainting) o;
+        return Objects.equals(title, that.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title);
     }
 }

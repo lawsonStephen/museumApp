@@ -46,6 +46,7 @@
         <th>NAME</th>
         <th>PAINTING_YEAR</th>
         <th>ARTIST</th>
+        <th>PAINTING</th>
     </tr>
     </thead>
     <tbody>
@@ -54,6 +55,7 @@
             <td>${painting.title}</td>
             <td>${painting.completitionYear}</td>
             <td>${painting.artistName}</td>
+            <td><img src="${painting.image}" width="80px" height="60px"/></td>
         </tr>
     </c:forEach>
     </tbody>

@@ -100,10 +100,13 @@ public class SearchController
     {
         Artist artist = artistService.findById(id);
         List<WikiArtPainting> paintings = paintingRetrieval.getPaintingsFor(artist);
-        paintings.removeIf(x-> !x.getArtistUrl().equals(artist.getArtistUrl()));
-
+        paintings = paintings.stream()
+                .filter(x-> x.getArtistUrl().equals(artist.getArtistUrl()))
+                .distinct()
+                .collect(Collectors.toList());
+        model.addAttribute("name", artist.getName());
         model.addAttribute("wikiPaintings", paintings);
-        return "paintingsByArtist";
+        return "paintingsByArtistNew";
 
     }
 
