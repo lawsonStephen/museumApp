@@ -20,10 +20,19 @@
             border-radius: 30px;
         }
 
+        .with-img {
+            background-image: url("images/exchangeBackground.avif");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+        }
+
     </style>
 </head>
-<body style="background-color: burlywood">
-
+<body class="with-img">
+<%--ackground-color: burlywood;--%>
 <header class="header_main">
     <div class="header_menu">
         <%--<div class="logo">
