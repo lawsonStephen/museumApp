@@ -68,5 +68,10 @@ public class SculptureServiceImpl implements SculptureService {
         return sculptureRepository.findByAuthorId(id);
     }
 
+    @Override
+    public List<Sculpture> findByName(String name) {
+        return sculptureRepository.findByName(name);
+    }
+
 
 }

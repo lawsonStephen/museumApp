@@ -10,4 +10,6 @@ public interface ArtistService {
     List<Artist> findAll();
 
     Artist findById(Long id);
+
+    List<Artist> findByName(String name);
 }

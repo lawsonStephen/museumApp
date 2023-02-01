@@ -36,7 +36,7 @@ public class ArtistServiceImpl implements ArtistService {
 
     @Override
     public List<Artist> findAll()  {
-        logger.info("Entering findAll function");
+        logger.info("Entering findAll function for artists");
 
         List<Artist> artists = artistRepository.findAll();
 
@@ -61,6 +61,11 @@ public class ArtistServiceImpl implements ArtistService {
         }
 
         return artist;
+    }
+
+    @Override
+    public List<Artist> findByName(String name) {
+        return artistRepository.findByName(name);
     }
 
 

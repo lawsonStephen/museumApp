@@ -10,4 +10,7 @@ import java.util.List;
 public interface SculptureRepository extends JpaRepository<Sculpture, Long> {
     @Query("select s from Sculpture s where s.artist.id=:id")
     List<Sculpture> findByAuthorId(@Param("id") Long id);
+
+    @Query("select s from Sculpture s where s.name like %:name%")
+    List<Sculpture> findByName(@Param("name") String name);
 }

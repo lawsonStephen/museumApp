@@ -68,5 +68,10 @@ public class PaintingServiceImpl implements PaintingService {
         return painting;
     }
 
-
+    @Override
+    public List<Painting> findByName(String name) {
+        return paintingRepository.findByName(name);
     }
+
+
+}

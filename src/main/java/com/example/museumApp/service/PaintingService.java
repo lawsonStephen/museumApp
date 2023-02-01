@@ -10,4 +10,6 @@ public interface PaintingService {
     List<Painting> findAll();
 
     Painting findById(Long id);
+
+    List<Painting> findByName(String name);
 }
