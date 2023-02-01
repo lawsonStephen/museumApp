@@ -15,7 +15,13 @@ public class Museum {
     @NotBlank
     private String location;
 
+    @Column(name="IMAGE_PATH")
     private String imagePath;
+
+    @Column(name="AVAILABLE_QUANTITY")
+    private int availableQuantity;
+    @Column(name="PRICE")
+    private float price;
 
     public String getImagePath() {
         return imagePath;
@@ -47,5 +53,21 @@ public class Museum {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getAvailableQuantity() {
+        return availableQuantity;
+    }
+
+    public void setAvailableQuantity(int availableQuantity) {
+        this.availableQuantity = availableQuantity;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 }
