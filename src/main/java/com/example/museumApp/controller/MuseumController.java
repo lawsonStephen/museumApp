@@ -23,14 +23,16 @@ import java.util.stream.Collectors;
 public class MuseumController {
 
     private final MuseumService museumService;
-    private final SculptureService sculptureService;
-    private final ArtistService artistService;
+//    private final SculptureService sculptureService;
+//    private final ArtistService artistService;
 
     @Autowired
-    public MuseumController(MuseumService museumService, SculptureService sculptureService, ArtistService artistService){
+    public MuseumController(MuseumService museumService
+//                            SculptureService sculptureService, ArtistService artistService
+    ){
         this.museumService = museumService;
-        this.sculptureService = sculptureService;
-        this.artistService = artistService;
+//        this.sculptureService = sculptureService;
+//        this.artistService = artistService;
     }
 
     @GetMapping
