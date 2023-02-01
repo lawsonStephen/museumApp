@@ -36,7 +36,7 @@ public class ArtistControllerTest {
     private ArtistController uut;
 
     @Test
-    public void doesUutExist(){
+    public void isUutNotNull(){
         assertThat(uut != null);
     }
 
