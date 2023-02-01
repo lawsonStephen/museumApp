@@ -14,6 +14,7 @@ public class Painting {
     private int painting_year;
     private double painting_price;
 
+    @Column(name="IMAGE_PATH")
     private String imagePath;
     @ManyToOne
     @JoinColumn(name="ARTIST_ID")
