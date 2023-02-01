@@ -17,12 +17,10 @@ public class SculptureServiceImpl implements SculptureService {
 
 
     private final SculptureRepository sculptureRepository;
-    private final ArtistRepository artistRepository;
 
     @Autowired
-    public SculptureServiceImpl(SculptureRepository sculptureRepository, ArtistRepository artistRepository){
+    public SculptureServiceImpl(SculptureRepository sculptureRepository){
         this.sculptureRepository=sculptureRepository;
-        this.artistRepository=artistRepository;
     }
 
 

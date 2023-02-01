@@ -1,9 +1,15 @@
 package com.example.museumApp.controller;
 
 import com.example.museumApp.model.*;
+import com.example.museumApp.service.WikiArtPaintingRetrieval;
+import com.example.museumApp.model.Artist;
+import com.example.museumApp.model.Museum;
+import com.example.museumApp.model.Painting;
+import com.example.museumApp.model.Sculpture;
 import com.example.museumApp.service.ArtistService;
 import com.example.museumApp.service.MuseumService;
-import com.example.museumApp.service.WikiArtPaintingRetrieval;
+import com.example.museumApp.service.PaintingService;
+
 import com.example.museumApp.service.SculptureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +35,9 @@ public class SearchController
 
     @Autowired
     private WikiArtPaintingRetrieval paintingRetrieval;
+
+    @Autowired
+    private PaintingService paintingService;
 
     @GetMapping("searchMuseum")
     public ModelAndView findMuseum(@PathParam("name") String name)
@@ -57,6 +66,16 @@ public class SearchController
         model.addObject("museums",museums);
         return model;
 
+    }
+
+    @GetMapping("searchPainting")
+    public ModelAndView findPainting(@PathParam("name") String name)
+    {
+        ModelAndView model = new ModelAndView("paintings");
+        List<Painting> paintings = paintingService.findByName(name);
+
+        model.addObject("paintings", paintings);
+        return model;
     }
 
     @GetMapping("exchange")

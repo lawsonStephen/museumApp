@@ -18,12 +18,14 @@ public class PaintingServiceImpl implements PaintingService {
 
 
         private final PaintingRepository paintingRepository;
-        private final ArtistRepository artistRepository;
+//        private final ArtistRepository artistRepository;
 
     @Autowired
-    public PaintingServiceImpl(PaintingRepository paintingRepository, ArtistRepository artistRepository){
+    public PaintingServiceImpl(PaintingRepository paintingRepository
+//            , ArtistRepository artistRepository
+    ){
         this.paintingRepository=paintingRepository;
-        this.artistRepository=artistRepository;
+//        this.artistRepository=artistRepository;
     }
 
 

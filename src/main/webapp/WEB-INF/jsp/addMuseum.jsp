@@ -10,6 +10,32 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
 </head>
+<header class="header_main">
+    <div class="header_menu">
+        <div class="nav_container">
+            <nav>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/museum">Museums</a></li>
+                    <li><a href="/artist">Artists</a></li>
+                    <li><a href="/painting">Paintings</a></li>
+                    <li><a href="/sculpture">Sculptures</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav_sign">
+            <nav>
+                <ul class="menu">
+                    <li><a href="/exchange">Exchange Art</a></li>
+                    <li><a href="/logout" class="button">
+                        <button>Log out</button>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
 <body>
 <h1>Add/Edit Museum</h1>
 

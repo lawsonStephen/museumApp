@@ -1,8 +1,8 @@
 package com.example.museumApp.controllerTest;
 
-import com.example.museumApp.controller.PaintingController;
-import com.example.museumApp.model.Painting;
-import com.example.museumApp.service.PaintingService;
+import com.example.museumApp.controller.SculptureController;
+import com.example.museumApp.model.Sculpture;
+import com.example.museumApp.service.SculptureService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -21,16 +21,16 @@ import static org.mockito.Mockito.*;
 
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
-public class PaintingControllerTest {
+public class SculptureControllerTest {
 
     @MockBean
-    private PaintingService paintingService;
+    private SculptureService sculptureService;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
-    private PaintingController uut;
+    private SculptureController uut;
 
     @Test
     public void doesUutExist(){
@@ -38,18 +38,17 @@ public class PaintingControllerTest {
     }
 
     @Test
-    public void doesGetAllPaintingsReturnCorrectly() throws Exception {
-        ModelAndView mnV = new ModelAndView("paintings");
-        Painting painting = new Painting();
-        List<Painting> paintings = new ArrayList<>(Arrays.asList(painting));
-        paintings.add(painting);
-        mnV.addObject("paintings", paintings);
+    public void doesGetAllSculpturesReturnCorrectly() throws Exception {
+        ModelAndView mnV = new ModelAndView("sculptures");
+        Sculpture sculpture = new Sculpture();
+        List<Sculpture> sculptures = new ArrayList<>(Arrays.asList(sculpture));
+        sculptures.add(sculpture);
+        mnV.addObject("sculptures", sculptures);
 
-        when(paintingService.findAll()).thenReturn(paintings);
-        mockMvc.perform(MockMvcRequestBuilders.get("http://localhost:8080/painting"));
-        verify(paintingService, times(1)).findAll();
+        when(sculptureService.findAll()).thenReturn(sculptures);
+        mockMvc.perform(MockMvcRequestBuilders.get("http://localhost:8080/sculpture"));
+        verify(sculptureService, times(2)).findAll();
         assertThat(mnV.equals(uut.get()));
     }
-
 
 }

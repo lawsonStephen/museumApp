@@ -2,14 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
     <title>Index</title>
 </head>
+<header class="header_main">
+    <div class="header_menu">
+        <div class="nav_container">
+            <nav>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/museum">Museums</a></li>
+                    <li><a href="/artist">Artists</a></li>
+                    <li><a href="/painting">Paintings</a></li>
+                    <li><a href="/sculpture">Sculptures</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav_sign">
+            <nav>
+                <ul class="menu">
+                    <li><a href="/exchange">Exchange Art</a></li>
+                    <li><a href="/logout" class="button">
+                        <button>Log out</button>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
 <body>
-<h1>Welcome to the Art index</h1>
-<h2><a href="http://localhost:8080/artist">Artists</a></h2>
-<h2><a href="http://localhost:8080/museum">Museums</a></h2>
-<h2><a href="http://localhost:8080/painting">Painting</a></h2>
-<h2><a href="http://localhost:8080/sculpture">Sculptures</a></h2>
-<h2><a href="http://localhost:8080/exchange">Exchange artifacts</a></h2>
+<main id="main-content">
+    <div class="main_features">
+        <h1>Welcome to our Museums app!</h1>
+        <h2><a href="http://localhost:8080/artist">Artists</a></h2>
+        <h2><a href="http://localhost:8080/museum">Museums</a></h2>
+        <h2><a href="http://localhost:8080/painting">Painting</a></h2>
+        <h2><a href="http://localhost:8080/sculpture">Sculptures</a></h2>
+        <h2><a href="http://localhost:8080/exchange">Exchange artifacts</a></h2>
+    </div>
+</main>
 </body>
 </html>
+
+

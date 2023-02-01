@@ -1,22 +1,23 @@
-INSERT INTO MUSEUM (id,IMAGE_PATH,location,name,AVAILABLE_QUANTITY,PRICE) VALUES
-    (default, 'images/prado.jpeg', 'Madrid','Prado',10,10),
-    (default, 'images/louvre.jpeg', 'Paris', 'Louvre',10,10),
-    (default, 'images/britishMuseum.jpeg','London','British Museum',10,10),
-    (default, 'images/nationalGallery.jpeg', 'London','National Gallery',10,10),
-    (default, 'images/accademia.jpeg','Florence','Accademia',10,10),
-    (default, 'images/stPeter.jpeg','Vatican City','St Peters Basilica',10,10),
-    (default, 'images/sistine.jpeg','Vatican City', 'Sistine Chapel',10,10),
-    (default, 'images/vanGoghMuseum.jpeg','Amsterdam','Van Gogh Museum',10,10),
-    (default, 'images/nationalHistory.jpeg','New York','American Museum of Natural History',10,10),
-    (default, 'images/smithsonian.jpeg','Washington D.C.','Smithsonian National Museum of American History',10,10),
-    (default, 'images/tateModern.jpeg','London','Tate Modern',10,10),
-    (default, 'images/uffizi.jpeg','Florence','Uffizi Gallery',10,10),
-    (default, 'images/hermitage.jpeg','St Petersburg','Hermitage Museum',10,10),
-    (default, 'images/rijksmuseum.jpeg','Amsterdam','Rijksmuseum',10,10),
-    (default, 'images/dOrsay.jpeg','Paris','Musée dOrsay',10,10),
-    (default, 'images/moma.jpeg','New York','Museum of Modern Art',10,10),
-    (default, 'images/nmok.jpeg','Seoul','National Museum of Korea',10,10),
-    (default, 'images/pergamon.jpeg','Berlin','Pergamon Museum',10,10);
+INSERT INTO MUSEUM (id, IMAGE_PATH, location, name, AVAILABLE_QUANTITY, PRICE)
+VALUES (default, 'images/prado.jpeg', 'Madrid', 'Prado', 10, 10),
+       (default, 'images/louvre.jpeg', 'Paris', 'Louvre', 10, 10),
+       (default, 'images/britishMuseum.jpeg', 'London', 'British Museum', 10, 10),
+       (default, 'images/nationalGallery.jpeg', 'London', 'National Gallery', 10, 10),
+       (default, 'images/accademia.jpeg', 'Florence', 'Accademia', 10, 10),
+       (default, 'images/stPeter.jpeg', 'Vatican City', 'St Peters Basilica', 10, 10),
+       (default, 'images/sistine.jpeg', 'Vatican City', 'Sistine Chapel', 10, 10),
+       (default, 'images/vanGoghMuseum.jpeg', 'Amsterdam', 'Van Gogh Museum', 10, 10),
+       (default, 'images/nationalHistory.jpeg', 'New York', 'American Museum of Natural History', 10, 10),
+       (default, 'images/smithsonian.jpeg', 'Washington D.C.', 'Smithsonian National Museum of American History', 10,
+        10),
+       (default, 'images/tateModern.jpeg', 'London', 'Tate Modern', 10, 10),
+       (default, 'images/uffizi.jpeg', 'Florence', 'Uffizi Gallery', 10, 10),
+       (default, 'images/hermitage.jpeg', 'St Petersburg', 'Hermitage Museum', 10, 10),
+       (default, 'images/rijksmuseum.jpeg', 'Amsterdam', 'Rijksmuseum', 10, 10),
+       (default, 'images/dOrsay.jpeg', 'Paris', 'Musée dOrsay', 10, 10),
+       (default, 'images/moma.jpeg', 'New York', 'Museum of Modern Art', 10, 10),
+       (default, 'images/nmok.jpeg', 'Seoul', 'National Museum of Korea', 10, 10),
+       (default, 'images/pergamon.jpeg', 'Berlin', 'Pergamon Museum', 10, 10);
 
 INSERT INTO ARTIST (id, name, birthplace, birth_year, ARTIST_URL) VALUES
     (default, 'Michelangelo', 'Italy', 1475,'michelangelo'),
@@ -75,4 +76,8 @@ INSERT INTO PAINTING (id, name, painting_year, painting_price, museum_id, artist
                         (default, 'The Kiss', 1908, 90, (SELECT id FROM museum WHERE name = 'Hermitage Museum'), (SELECT id FROM artist WHERE name = 'Klimt')),
                         (default, 'Night Watch', 1642, 140, (SELECT id FROM museum WHERE name = 'Rijksmuseum'), (SELECT id FROM artist WHERE name = 'Rembrandt')),
                         (default, 'The School of Athens', 1510, 160, (SELECT id FROM museum WHERE name = 'St Peters Basilica'), (SELECT id FROM artist WHERE name = 'Raphael'));
+
+
+
+
 

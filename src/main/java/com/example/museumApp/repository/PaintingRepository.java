@@ -1,5 +1,6 @@
 package com.example.museumApp.repository;
 
+import com.example.museumApp.model.Museum;
 import com.example.museumApp.model.Painting;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
