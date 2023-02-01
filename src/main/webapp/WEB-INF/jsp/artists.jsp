@@ -84,6 +84,7 @@
         <th class="col" style="width: 60px">NAME</th>
         <th class="col" style="width: 60px">BIRTH PLACE</th>
         <th class="col" style="width: 180px">BIRTH YEAR</th>
+        <th class="col" style="width: 180px">PAINTINGS</th>
     </tr>
     </thead>
     <tbody>
@@ -101,6 +102,11 @@
             <td>${artist.name}</td>
             <td>${artist.birthplace}</td>
             <td>${artist.birth_year}</td>
+            <td><a href="
+                          <c:url value = "paintingsByArtist">
+                           <c:param name="id" value="${artist.id}" />
+                           </c:url>
+                           ">See their paintings</a>
         </tr>
     </c:forEach>
 

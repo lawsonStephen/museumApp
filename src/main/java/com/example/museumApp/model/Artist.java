@@ -18,6 +18,9 @@ public class Artist {
     @NotNull
     private int birth_year;
 
+    @Column(name="ARTIST_URL")
+    private String artistUrl;
+
     public Long getId() {
         return id;
     }
@@ -48,5 +51,13 @@ public class Artist {
 
     public void setBirth_year(int birth_year) {
         this.birth_year = birth_year;
+    }
+
+    public String getArtistUrl() {
+        return artistUrl;
+    }
+
+    public void setArtistUrl(String artistUrl) {
+        this.artistUrl = artistUrl;
     }
 }
