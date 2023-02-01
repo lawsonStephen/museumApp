@@ -1,0 +1,54 @@
+type Artist {
+    id: ID!
+    name: String!
+    birthplace: String!
+    birth_year: Int!
+}
+
+type Museum {
+    id: ID!
+    name: String
+    location: String!
+    imagePath: String!
+    availableQuantity: Int!
+    price: Float!
+}
+type Sculpture {
+    id:ID!
+    name: String!
+    sculpture_year: Int!
+    sculpture_price: Float!
+    artist: Artist!
+    museum: Museum!
+}
+
+type Painting {
+    id: ID!
+    name: String!
+    painting_year: Int!
+    painting_price: Float!
+    artist: Artist
+    museum: Museum!
+
+}
+
+type Query {
+    artists: [Artist]!
+    artistById(id: ID): Artist
+    artistByName(name: String): [Artist]
+
+    museums:[Museum]!
+    museumById(id: ID): Museum
+    museumByName(name: String): [Museum]
+
+    paintings: [Painting]!
+    paintingById(id:ID): Painting
+    paintingByName(name:String): [Painting]
+
+    sculptures: [Sculpture]!
+    sculptureById(id: ID): Sculpture
+    sculptureByName(name: String): [Sculpture]
+}
+
+
+
