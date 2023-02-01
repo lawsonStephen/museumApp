@@ -1,4 +1,4 @@
-INSERT INTO MUSEUM (id,IMAGE_PATH,name,location,AVAILABLE_QUANTITY,PRICE) VALUES
+INSERT INTO MUSEUM (id,IMAGE_PATH,location,name,AVAILABLE_QUANTITY,PRICE) VALUES
     (default, 'images/prado.jpeg', 'Madrid','Prado',10,10),
     (default, 'images/louvre.jpeg', 'Paris', 'Louvre',10,10),
     (default, 'images/britishMuseum.jpeg','London','British Museum',10,10),

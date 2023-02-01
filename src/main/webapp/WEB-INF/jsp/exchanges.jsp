@@ -60,6 +60,27 @@
 </header>
 <h1 style="text-align: center">Exchange artifacts</h1>
 
+<div>
+    <form method="get" action="exchangeArtifact">
+        <select class="form-select form-select-lg mb-3" aria-label="Default select example" name="sculptureId">
+            <option selected disabled>Choose sculpture</option>
+            <c:forEach items="${sculptures}" var="sculpture">
+                <option value="${sculpture.id}">${sculpture.name} - ${sculpture.artist.name}</option>
+            </c:forEach>
+        </select>
+        <select class="form-select form-select-lg mb-3" aria-label="Default select example" name="museumName">
+            <option selected disabled>Choose museum</option>
+            <c:forEach items="${museumNames}" var="name">
+                <option value="${name}">${name}</option>
+            </c:forEach>
+        </select>
+
+        <input class="btn btn-dark btn-sm" type="submit" value="send">
+    </form>
+</div>
+
+
+
 
 <%--<div class="container">--%>
 <%--    <div class="row">--%>

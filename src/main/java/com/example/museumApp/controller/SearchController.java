@@ -8,7 +8,10 @@ import com.example.museumApp.service.MuseumService;
 import com.example.museumApp.service.SculptureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.websocket.server.PathParam;
@@ -57,9 +60,23 @@ public class SearchController
     }
 
     @GetMapping("exchange")
-    public String exchange()
+    public String exchangePage(@PathParam("museumName") String museumName)
     {
         return "exchanges";
     }
+
+    @GetMapping("exchangeArtifact")
+    public String exchangeArtifact(@PathParam("museumName") String museumName, @PathParam("sculptureId") Long sculptureId, Model model)
+    {
+        Museum museum = museumService.findByName(museumName).get(0);
+        Sculpture sculpture = sculptureService.findById(sculptureId);
+        sculpture.setMuseum(museum);
+        sculptureService.save(sculpture);
+
+        return "museums";
+    }
+
+
+
 
 }
