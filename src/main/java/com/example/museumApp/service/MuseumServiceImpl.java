@@ -63,6 +63,13 @@ public class MuseumServiceImpl implements MuseumService {
         return museum;
     }
 
+    @Override
+    public List<Museum> findByName(String name) {
+        return museumRepository.findByName(name);
+    }
+
+
+
 
 }
 

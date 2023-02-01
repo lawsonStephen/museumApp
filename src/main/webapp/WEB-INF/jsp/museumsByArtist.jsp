@@ -20,11 +20,6 @@
             border-radius: 30px;
         }
 
-
-
-
-
-
     </style>
 </head>
 <body style="background-color: burlywood">
@@ -63,7 +58,7 @@
         </div>
     </div>
 </header>
-<h1 style="text-align: center">Museums</h1>
+<h3 style="text-align: center">${artist.name} Is Exhibited in The Following Museums:</h3>
 
 
 <div class="container">
@@ -76,7 +71,7 @@
 
         </c:forEach>
 
-</div>
+    </div>
 </div>
 
 <table class="table table-dark">
@@ -119,6 +114,3 @@
 </table>
 </body>
 </html>
-
-
-

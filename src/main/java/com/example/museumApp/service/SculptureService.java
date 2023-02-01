@@ -10,4 +10,6 @@ public interface SculptureService {
     List<Sculpture> findAll();
 
     Sculpture findById(Long id);
+
+    List<Sculpture> findByAuthorId(Long id);
 }
