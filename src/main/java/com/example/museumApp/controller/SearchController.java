@@ -56,4 +56,10 @@ public class SearchController
 
     }
 
+    @GetMapping("exchange")
+    public String exchange()
+    {
+        return "exchanges";
+    }
+
 }
