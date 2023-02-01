@@ -1,5 +1,7 @@
 package com.example.museumApp.controller;
 
+import com.example.museumApp.model.*;
+import com.example.museumApp.service.WikiArtPaintingRetrieval;
 import com.example.museumApp.model.Artist;
 import com.example.museumApp.model.Museum;
 import com.example.museumApp.model.Painting;
@@ -7,13 +9,12 @@ import com.example.museumApp.model.Sculpture;
 import com.example.museumApp.service.ArtistService;
 import com.example.museumApp.service.MuseumService;
 import com.example.museumApp.service.PaintingService;
+
 import com.example.museumApp.service.SculptureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.websocket.server.PathParam;
@@ -30,7 +31,10 @@ public class SearchController
     private ArtistService artistService;
 
     @Autowired
-    SculptureService sculptureService;
+    private SculptureService sculptureService;
+
+    @Autowired
+    private WikiArtPaintingRetrieval paintingRetrieval;
 
     @Autowired
     private PaintingService paintingService;
@@ -89,6 +93,18 @@ public class SearchController
         sculptureService.save(sculpture);
 
         return "museums";
+    }
+
+    @GetMapping("paintingsByArtist")
+    public String paintingsByArtist(@PathParam("id") Long id, Model model)
+    {
+        Artist artist = artistService.findById(id);
+        List<WikiArtPainting> paintings = paintingRetrieval.getPaintingsFor(artist);
+        paintings.removeIf(x-> !x.getArtistUrl().equals(artist.getArtistUrl()));
+
+        model.addAttribute("wikiPaintings", paintings);
+        return "paintingsByArtist";
+
     }
 
 

@@ -1,5 +1,8 @@
 package com.example.museumApp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -70,6 +73,8 @@ public class Painting {
     public void setMuseum(Museum museum) {
         this.museum = museum;
     }
+
+
 
     public String getImagePath() {
         return imagePath;
