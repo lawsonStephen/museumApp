@@ -11,6 +11,11 @@
     margin: 16px;
 }
 
+body {
+    background-color: burlywood;
+    margin: 0px;
+}
+
 header {
     margin: auto;
     background-position: top center;
@@ -25,6 +30,10 @@ header {
     max-width: 100%;
 }
 
+.header_main {
+    display: grid;
+}
+
 .header_menu {
     max-width: 1080px;
     background-position: top center;
@@ -33,19 +42,19 @@ header {
 }
 
 button {
-    background-color: #D11067;
-    border-radius: 20px;
+    background-color: #cb8501;
+    border-radius: 20px;;
     text-align: center;
     color: #EAEDF4;
     font-size: 18px;
     border: 1px;
-    border-color: #D11067;
+    border-color: #cb8501;
     padding: 10px 50px;
 }
 
 button:hover {
     background-color: white;
-    color:#D11067;
+    color:#cb8501;
     transition: 0.3s;
 }
 
@@ -60,14 +69,11 @@ nav {
 
 nav ul.menu {
     margin: auto;
-    /*padding-top: 10px;*/
-    margin-right:58px;
 }
 
 footer nav ul.menu {
     margin: auto;
-    /*padding-top: 10px;*/
-    margin-right: 2px;
+
 }
 
 nav li {
@@ -91,11 +97,116 @@ nav a:hover {
     text-decoration-style: solid;
     text-decoration-thickness: 4px;
     color: #EAEDF4;
-    text-decoration-color: #D11067;
+    text-decoration-color: #cb8501;
 }
 
 .paintings_image {
     max-width: 1080px;
     margin: 0 auto;
     padding: 30px 30px 0 30px;
+}
+
+.main_features {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px 30px 0 30px;
+}
+
+/*Horizontal Scrolling */
+.horizontal-scroll-wrapper {
+    margin: 0px;
+    display: flex;
+    grid-auto-flow: column;
+    gap: 1rem;
+    height: 750px;
+    padding-left: 80px;
+    width: auto;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    background-color: white;
+    background-color: burlywood;
+}
+
+.painting {
+    width: auto;
+    display: flex; /* block on top*/
+    grid-auto-flow: column;
+    gap: 4rem;
+}
+
+.left {
+    right: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /*height: 700px;*/
+    /*display: inline-grid;*/
+}
+
+.left img {
+    height: 700px;
+}
+
+.left p, h1, h2, h3, h4, p {
+    text-align: left;
+}
+
+.right {
+    float: right;
+    width: 600px;
+    padding: 0 8px 0 8px;
+    box-sizing: border-box;
+    display: inline; /*contents */
+}
+
+.paintings_main {
+    text-align: center;
+    background-color: burlywood;
+}
+
+.paintings_main h1{
+    margin-left: 80px;
+    padding-top: 60px;
+    margin-bottom: 20px;
+}
+
+.paintings_main .topnav{
+    margin-left: 80px;
+    margin-bottom: 60px;
+}
+
+/* Search bar */
+.topnav {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.topnav .search-container button {
+    float: left;
+    margin-left: 30px;
+    padding-left: 18px;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    margin-top: -5px;
+}
+
+.topnav .search-container {
+    display: list-item;
+    margin-top: -10px;
+    list-style: none;
+}
+
+.topnav .search-container form {
+    margin-top: 0px;
+}
+
+.topnav p {
+    float: left;
+    padding-right: 50px;
+}
+
+.form-control {
+    float: left;
+    margin-top: -5px;
 }
