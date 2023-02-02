@@ -44,7 +44,7 @@
         <p>Please feel free to <strong>enjoy and discover</strong> more about these <u>precious and wonderful</u>
             sculptures:</p>
         <div class="search-container">
-            <form style="margin-top: 13px" method="GET" action="searchPainting">
+            <form style="margin-top: 13px" method="GET" action="searchSculpture">
                 <input style="width: 300px" class="form-control" type="text" placeholder="Search.." name="name">
                 <button type="submit">Submit</button>
             </form>
@@ -55,7 +55,7 @@
         <c:forEach items="${sculptures}" var="sculpture">
             <div class="painting">
                 <div class="left">
-                    <img src="${sculpture.imagePath}" alt="paintings images" sizes=""></div>
+                    <img src="${sculpture.imagePath}" alt="sculpture images" sizes=""></div>
                 <div class="right">
                     <h2>${sculpture.name}</h2>
                     <h4>${sculpture.artist.name}</h4>

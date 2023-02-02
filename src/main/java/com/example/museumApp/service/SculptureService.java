@@ -14,4 +14,5 @@ public interface SculptureService {
     List<Sculpture> findByAuthorId(Long id);
 
     List<Sculpture> findByName(String name);
+    List<Sculpture> findByArtistName(String name);
 }
