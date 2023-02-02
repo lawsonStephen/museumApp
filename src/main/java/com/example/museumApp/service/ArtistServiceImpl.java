@@ -54,10 +54,8 @@ public class ArtistServiceImpl implements ArtistService {
             artist = optionalArtist.get();
         } else {
             artist = artistRepository.getReferenceById(1L);
-//            movie = new Movie();
-//            movie.setTitle("Yellowstone");
-//            movie.setIsbn("1111");
-//            movie.setMovieType((movieTypeRepository.getReferenceById(1L)));
+            artist.setId(null);
+
         }
 
         return artist;

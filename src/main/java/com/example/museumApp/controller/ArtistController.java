@@ -72,9 +72,11 @@ public class ArtistController {
 
             modelAndView.addObject("addArtistSuccess", true);
             modelAndView.addObject("addArtistName", artist.getName());
-            artistService.save(artist);
 
             modelAndView.addObject("artist", artist);
+            artistService.save(artist);
+
+
         }
         return modelAndView;
 

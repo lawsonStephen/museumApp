@@ -45,7 +45,7 @@
 
 <form:form action="/artist" method="post" modelAttribute="artist">
     <form:errors path="*"  cssClass="errorblock" element="div/"/>
-    <form:label path="id">ID: ${artist.id}</form:label><form:hidden path="id" />
+    <form:label path="id"> ${artist.id}</form:label><form:hidden path="id" />
     <form:label path="name" cssErrorClass="error">NAME:  </form:label> <form:input path="name" type="text" cssErrorClass="error"/>
     <form:label path="birthplace" cssErrorClass="error">BIRTHPLACE:  </form:label> <form:input path="birthplace" type="text" cssErrorClass="error"/>
     <form:label path="birth_year" cssErrorClass="error">BIRTH_YEAR:  </form:label> <form:input path="birth_year" type="text" cssErrorClass="error"/>

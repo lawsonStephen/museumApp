@@ -59,10 +59,7 @@ public class PaintingServiceImpl implements PaintingService {
             painting = optionalPainting.get();
         } else {
             painting = paintingRepository.getReferenceById(1L);
-//            movie = new Movie();
-//            movie.setTitle("Yellowstone");
-//            movie.setIsbn("1111");
-//            movie.setMovieType((movieTypeRepository.getReferenceById(1L)));
+            painting.setId(null);
         }
 
         return painting;

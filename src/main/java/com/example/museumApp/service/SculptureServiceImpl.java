@@ -54,10 +54,7 @@ public class SculptureServiceImpl implements SculptureService {
             sculpture = optionalSculpture.get();
         } else {
             sculpture = sculptureRepository.getReferenceById(1L);
-//            movie = new Movie();
-//            movie.setTitle("Yellowstone");
-//            movie.setIsbn("1111");
-//            movie.setMovieType((movieTypeRepository.getReferenceById(1L)));
+            sculpture.setId(null);
         }
 
         return sculpture;

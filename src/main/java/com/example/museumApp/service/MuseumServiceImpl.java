@@ -54,10 +54,7 @@ public class MuseumServiceImpl implements MuseumService {
             museum = optionalMuseum.get();
         } else {
             museum = museumRepository.getReferenceById(1L);
-//            movie = new Movie();
-//            movie.setTitle("Yellowstone");
-//            movie.setIsbn("1111");
-//            movie.setMovieType((movieTypeRepository.getReferenceById(1L)));
+            museum.setId(null);
         }
 
         return museum;
