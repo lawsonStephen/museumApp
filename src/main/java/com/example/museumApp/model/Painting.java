@@ -21,6 +21,9 @@ public class Painting {
 
     @Column(name="IMAGE_PATH")
     private String imagePath;
+
+    @Column(name="LINK")
+    private String link;
     @ManyToOne
     @JoinColumn(name="ARTIST_ID")
     private Artist artist;
@@ -76,7 +79,13 @@ public class Painting {
         this.museum = museum;
     }
 
+    public String getLink() {
+        return link;
+    }
 
+    public void setLink(String link) {
+        this.link = link;
+    }
 
     public String getImagePath() {
         return imagePath;

@@ -1,4 +1,3 @@
-
 .error {
     color: #ff0000;
 }
@@ -14,6 +13,11 @@
 body {
     background-color: burlywood;
     margin: 0px;
+}
+
+body h1 {
+    color:  #172755;
+    margin-bottom: 30px;
 }
 
 header {
@@ -39,6 +43,14 @@ header {
     background-position: top center;
     margin: auto;
     display: flex;
+}
+
+body a {
+    color: white;
+}
+
+body a:hover {
+    color: #cb8501;
 }
 
 button {
@@ -112,6 +124,58 @@ nav a:hover {
     padding: 30px 30px 0 30px;
 }
 
+.main_features h2 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 450px;
+}
+/* Index box decoration*/
+.index_sculptures_box {
+    background-image: url(https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+    height: 450px;
+    width: auto !important;
+}
+
+.index_painting_box {
+    background-image: url(https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center;
+    height: 450px;
+    width: auto !important;
+}
+
+.index_artists_box {
+    background-image: url(https://images.unsplash.com/photo-1658314756129-5b27f344b65b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: top;
+    height: 450px;
+    width: auto !important;
+}
+
+.index_museums_box {
+    background-image: url(https://images.unsplash.com/photo-1616432725307-b93cc6098dc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: top;
+    height: 450px;
+    width: auto !important;
+}
+
+.index_exchange_box {
+    background-image: url(https://images.unsplash.com/reserve/nTr1589kTgyXCOdStCGm_MikaRuusunen.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: top;
+    height: 450px;
+    width: auto !important;
+}
+
+
 /*Horizontal Scrolling */
 .horizontal-scroll-wrapper {
     margin: 0px;
@@ -132,7 +196,7 @@ nav a:hover {
     width: auto;
     display: flex; /* block on top*/
     grid-auto-flow: column;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .left {
@@ -145,7 +209,7 @@ nav a:hover {
 }
 
 .left img {
-    height: 700px;
+    height: 600px;
 }
 
 .left p, h1, h2, h3, h4, p {
@@ -154,11 +218,13 @@ nav a:hover {
 
 .right {
     float: right;
-    width: 600px;
+    width: 550px;
     padding: 0 8px 0 8px;
     box-sizing: border-box;
     display: inline; /*contents */
+    text-align: left;
 }
+
 
 .paintings_main {
     text-align: center;
@@ -184,8 +250,6 @@ nav a:hover {
 
 .topnav .search-container button {
     float: left;
-    margin-left: 30px;
-    padding-left: 18px;
     padding-top: 6.5px;
     padding-bottom: 6.5px;
     margin-top: -5px;

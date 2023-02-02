@@ -17,6 +17,11 @@ public class Sculpture {
     private int sculpture_year;
 
     private double sculpture_price;
+
+    @Column(name="IMAGE_PATH")
+    private String imagePath;
+
+    private String link;
     @ManyToOne
     @JoinColumn(name="ARTIST_ID")
     private Artist artist;
@@ -70,5 +75,21 @@ public class Sculpture {
 
     public void setMuseum(Museum museum) {
         this.museum = museum;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }
