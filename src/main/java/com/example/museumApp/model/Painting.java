@@ -83,4 +83,6 @@ public class Painting {
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
+
+
 }
