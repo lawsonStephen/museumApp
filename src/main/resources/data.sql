@@ -53,7 +53,7 @@ VALUES (default, 'David', 1501, 100, select id from artist where name = 'Michela
         name = 'Louvre', 'images/sculptures/Saint Mark.jpg'),
        (default, 'Pieta', 1499, 5, select id from artist where name = 'Michelangelo', select id from museum where name =
         'St Peters Basilica', 'images/sculptures/Pieta.jpg'),
-       (default, 'Bacchus', 1497, 4.5, (select id from artist where name = 'Michelangelo'),
+       (default, 'Bacchus', 1497, 4.5, (select id from artist where name = 'Raphael'),
         (select id from museum where name = 'Museum of Modern Art'), 'images/sculptures/Bacchus.jpg'),
        (default, 'Brillo Boxes', 1964, 1.8, (select id from artist where name = 'Warhol'),
         (select id from museum where name = 'Smithsonian National Museum of American History'),
@@ -66,7 +66,7 @@ INSERT INTO PAINTING (id, IMAGE_PATH, name, painting_price, painting_year, museu
 VALUES (default, 'images/paintings/The Starry Night.jpg', 'The Starry Night', 117, 1890, SELECT id FROM museum WHERE
         name = 'Museum of Modern Art', SELECT id FROM artist WHERE name = 'VanGogh',
         'https://en.wikipedia.org/wiki/The_Starry_Night'),
-       (default, 'images/paintings/The Kiss.jpg', 'The Kiss', 5.5, 1908, SELECT id from museum where name =
+       (default, 'images/paintings/The Kiss.jpeg', 'The Kiss', 5.5, 1908, SELECT id from museum where name =
         'Musée dOrsay', SELECT id from artist where name = 'Klimt',
         'https://en.wikipedia.org/wiki/The_Kiss_%28Klimt%29'),
        (default, 'images/paintings/The Creation of Adam.jpg', 'The Creation of Adam', 80, 1512,

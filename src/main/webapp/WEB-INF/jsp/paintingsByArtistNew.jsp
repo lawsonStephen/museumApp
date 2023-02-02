@@ -60,7 +60,6 @@
                 <div class="right">
                     <h2>${painting.title}</h2>
                     <h4>${painting.artistName}</h4>
-                    <p>Description here jkadsfjasfnandfc fqehfquafgweaf qfefqefwefg qfgwqmqoqirb agegsegswh</p>
                     <a href="https://www.louvre.fr/en/">Link</a>
                 </div>
             </div>

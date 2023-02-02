@@ -59,6 +59,16 @@ public class SearchController
             .map(Sculpture::getMuseum)
             .distinct()
             .collect(Collectors.toList());
+
+        List<Painting> paintings = paintingService.findByAuthorId(id);
+        List<Museum> museums1 = paintings
+                .stream()
+                .map(Painting::getMuseum)
+                .distinct()
+                .collect(Collectors.toList());
+        museums.addAll(museums1);
+        museums = museums.stream().distinct().collect(Collectors.toList());
+
         Artist artist = artistService.findById(id);
 
         ModelAndView model = new ModelAndView("museumsByArtist");

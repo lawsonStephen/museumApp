@@ -12,4 +12,6 @@ public interface PaintingService {
     Painting findById(Long id);
 
     List<Painting> findByName(String name);
+
+    List<Painting> findByAuthorId(Long id);
 }
