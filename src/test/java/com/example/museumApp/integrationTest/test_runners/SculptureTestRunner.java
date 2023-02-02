@@ -1,4 +1,4 @@
-package com.example.museumApp.integrationTest;
+package com.example.museumApp.integrationTest.test_runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
