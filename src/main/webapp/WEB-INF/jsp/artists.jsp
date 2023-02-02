@@ -26,15 +26,13 @@
 
 <header class="header_main">
     <div class="header_menu">
-        <%--<div class="logo">
-            <a href="index.html"><img src="images/logo-header.svg" alt="logotype"></a>
-        </div>--%>
         <div class="nav_container">
             <nav>
                 <ul class="menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/painting">Paintings</a></li>
+                    <li><a href="/museum">Museums</a></li>
                     <li><a href="/artist">Artists</a></li>
+                    <li><a href="/painting">Paintings</a></li>
                     <li><a href="/sculpture">Sculptures</a></li>
                 </ul>
             </nav>
@@ -42,33 +40,39 @@
         <div class="nav_sign">
             <nav>
                 <ul class="menu">
-                    <li><a href="/museum"> Museums</a></li>
+                    <li><a href="/exchange">Exchange Artifact</a></li>
                     <li><a href="/logout" class="button">
                         <button>Log out</button>
                     </a></li>
                 </ul>
             </nav>
         </div>
-        <div>
-            <nav>
-                <form style="margin-top: 13px" method="GET" action="searchArtist">
-                    <input class="form-control" type="text" value="search" name="name">
-                </form>
-            </nav>
-        </div>
     </div>
 </header>
-<h1 style="text-align: center">Artists</h1>
 
+<div class="container">
+    <h1 style="padding-top: 60px;">Artists</h1>
+
+    <div class="topnav">
+        <p><strong>Discover all the secrets and more about these amazing artists:</strong></p>
+        <div class="search-container">
+            <form style="margin-top: 13px" method="GET" action="searchArtist">
+                <input style="width: 300px" class="form-control" type="text" placeholder="Search.." name="name">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
         <c:forEach items="${artists}" var="artist">
             <div class="col">
-                <img  src="images/${artist.name}.jpeg" alt="${artist.name}"><br>
+                <img src="images/${artist.name}.jpeg" alt="${artist.name}"><br>
                 <a href="<c:url value = "/museumsByArtist">
                     <c:param name="id" value="${artist.id}" />
-                    </c:url>"><div class="link-info">${artist.name}: Where can you see them?</div>
+                    </c:url>">
+                    <div class="link-info">${artist.name}: Where can you see them?</div>
                 </a><br>
             </div>
 
@@ -77,7 +81,7 @@
     </div>
 </div>
 
-<table class="table table-dark">
+<table class="table table-dark" style="background-color: #172755">
     <thead>
     <tr>
         <th class="col" style="width: 60px">ID</th>
@@ -88,7 +92,6 @@
     </tr>
     </thead>
     <tbody>
-
 
 
     <c:forEach items="${artists}" var="artist">

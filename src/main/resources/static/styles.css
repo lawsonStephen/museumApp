@@ -16,12 +16,12 @@ body {
 }
 
 body h1 {
-    color:  #172755;
+    color: #172755;
     margin-bottom: 30px;
 }
 
 body h2, h3, h4, p {
-    color:  #172755;
+    color: #172755;
 }
 
 header {
@@ -31,7 +31,7 @@ header {
     padding-top: 10px;
     background-color: #172755;
     background-size: cover;
-    font-family: Rubik,Helvetica, Arial, sans-serif;
+    font-family: Rubik, Helvetica, Arial, sans-serif;
     border-bottom: 1px solid #FFF1E4;
     display: flex;
     flex-flow: column nowrap;
@@ -51,6 +51,7 @@ header {
 
 body a {
     color: white;
+    text-decoration: underline;
 }
 
 body a:hover {
@@ -70,7 +71,7 @@ button {
 
 button:hover {
     background-color: white;
-    color:#cb8501;
+    color: #cb8501;
     transition: 0.3s;
 }
 
@@ -87,10 +88,9 @@ button:hover {
 
 .buton:hover {
     background-color: white;
-    color:#cb8501;
+    color: #cb8501;
     transition: 0.3s;
 }
-
 
 
 /* Nav menu*/
@@ -152,7 +152,12 @@ nav a:hover {
     vertical-align: middle;
     line-height: 450px;
 }
+
 /* Index box decoration*/
+.index-header-title {
+    font-size: 2.5rem;
+    font-family: "Roboto";
+}
 .index_sculptures_box {
     background-image: url(https://images.unsplash.com/photo-1575223970966-76ae61ee7838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
     background-repeat: no-repeat;
@@ -252,13 +257,13 @@ nav a:hover {
     background-color: burlywood;
 }
 
-.paintings_main h1{
+.paintings_main h1 {
     margin-left: 80px;
     padding-top: 60px;
     margin-bottom: 20px;
 }
 
-.paintings_main .topnav{
+.paintings_main .topnav {
     margin-left: 80px;
     margin-bottom: 60px;
 }
