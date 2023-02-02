@@ -26,7 +26,10 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-
+        }
+        .exchange-options {
+            padding-top:3px;
+            padding-bottom:2px;
         }
 
     </style>
@@ -71,20 +74,20 @@
 
 <div>
     <form method="get" action="exchangeArtifact">
-        <select class="form-select form-select-lg mb-3" aria-label="Default select example" name="sculptureId">
+        <select class="form-select form-select-lg mb-3 exchange-options" aria-label="Default select example" name="sculptureId">
             <option selected disabled>Choose sculpture</option>
             <c:forEach items="${sculptures}" var="sculpture">
                 <option value="${sculpture.id}">${sculpture.name} - ${sculpture.artist.name}</option>
             </c:forEach>
         </select>
-        <select class="form-select form-select-lg mb-3" aria-label="Default select example" name="museumName">
+        <select class="form-select form-select-lg mb-3 exchange-options" aria-label="Default select example" name="museumName">
             <option selected disabled>Choose museum</option>
             <c:forEach items="${museumNames}" var="name">
                 <option value="${name}">${name}</option>
             </c:forEach>
         </select>
 
-        <input class="btn btn-dark btn-sm" style="padding:1px 15px" type="submit" value="send">
+        <input class="buton" style="padding-top:0px;padding-bottom:0px;" type="submit" value="send">
     </form>
 </div>
 
