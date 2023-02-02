@@ -1,4 +1,3 @@
-@UnderTest
 Feature: Edit existing painting
   Scenario: Everything works for editing an existing painting
     Given I have a browser open
