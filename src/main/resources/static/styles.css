@@ -61,7 +61,7 @@ button {
     font-size: 18px;
     border: 1px;
     border-color: #cb8501;
-    padding: 10px 50px;
+    padding: 4px 50px;
 }
 
 button:hover {
@@ -69,6 +69,25 @@ button:hover {
     color:#cb8501;
     transition: 0.3s;
 }
+
+.buton {
+    background-color: #cb8501;
+
+    text-align: center;
+    color: #EAEDF4;
+    font-size: 18px;
+    border: 1px;
+    border-color: #cb8501;
+    padding: 3px 50px;
+}
+
+.buton:hover {
+    background-color: white;
+    color:#cb8501;
+    transition: 0.3s;
+}
+
+
 
 /* menu de navegación*/
 nav {

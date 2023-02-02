@@ -68,13 +68,17 @@
 
 <div class="container">
     <div class="row">
-        <c:forEach items="${museums}" var="museum">
-            <div class="col">
-                <img  src="${museum.imagePath}" alt="${museum.name}"><br>
-                <a href="https://www.louvre.fr/en"><div class="link-info">${museum.name}: Buy Tickets</div></a><br>
-            </div>
+       <c:forEach items="${museums}" var="museum">
+                   <div class="col">
+                       <img  src="${museum.imagePath}" alt="${museum.name}"><br>
+                       <a href="
+                           <c:url value = "/tickets">
+                               <c:param name="id" value="${museum.id}" />
+                           </c:url>
+                           "><div class="link-info">${museum.name}: Buy Tickets</div></a><br>
+                   </div>
 
-        </c:forEach>
+               </c:forEach>
 
 </div>
 </div>
