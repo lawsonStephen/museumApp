@@ -52,13 +52,13 @@
     </div>
 
     <div class="horizontal-scroll-wrapper squares">
-        <c:forEach items="${paintings}" var="painting">
+        <c:forEach items="${sculptures}" var="sculpture">
             <div class="painting">
                 <div class="left">
-                    <img src="${painting.imagePath}" alt="paintings images" sizes=""></div>
+                    <img src="${sculpture.imagePath}" alt="paintings images" sizes=""></div>
                 <div class="right">
-                    <h2>${painting.name}</h2>
-                    <h4>${painting.artist.name}</h4>
+                    <h2>${sculpture.name}</h2>
+                    <h4>${sculpture.artist.name}</h4>
                     <p>Description here jkadsfjasfnandfc fqehfquafgweaf qfefqefwefg qfgwqmqoqirb agegsegswh</p>
                     <a href="https://www.louvre.fr/en/">Link</a>
                 </div>
