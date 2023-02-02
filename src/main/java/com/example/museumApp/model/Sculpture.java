@@ -1,6 +1,7 @@
 package com.example.museumApp.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "SCULPTURE")
@@ -10,6 +11,7 @@ public class Sculpture {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String name;
 
     private int sculpture_year;
