@@ -73,5 +73,10 @@ public class PaintingServiceImpl implements PaintingService {
         return paintingRepository.findByName(name);
     }
 
+    @Override
+    public List<Painting> findByAuthorId(Long id) {
+        return paintingRepository.findByAuthorId(id);
+    }
+
 
 }

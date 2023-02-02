@@ -84,7 +84,7 @@
             </c:forEach>
         </select>
 
-        <input class="btn btn-dark btn-sm" type="submit" value="send">
+        <input class="btn btn-dark btn-sm" style="padding:1px 15px" type="submit" value="send">
     </form>
 </div>
 
