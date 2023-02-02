@@ -26,7 +26,7 @@
         <div class="nav_sign">
             <nav>
                 <ul class="menu">
-                    <li><a href="/exchange">Exchange Art</a></li>
+                    <li><a href="/exchange">Exchange Artifact</a></li>
                     <li><a href="/logout" class="button">
                         <button>Log out</button>
                     </a></li>

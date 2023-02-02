@@ -41,8 +41,8 @@
     <h1>Sculpture</h1>
 
     <div class="topnav">
-        <p>Please feel free to <strong>enjoy and discover</strong> more about these <u>precious and wonderful</u>
-            sculptures:</p>
+        <p><strong>Please feel free to enjoy and discover more about these <u>precious and wonderful</u>
+            sculptures:</strong></p>
         <div class="search-container">
             <form style="margin-top: 13px" method="GET" action="searchSculpture">
                 <input style="width: 300px" class="form-control" type="text" placeholder="Search.." name="name">

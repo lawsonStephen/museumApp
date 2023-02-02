@@ -38,12 +38,12 @@
 
 <body>
 
-<main class="paintings_main">
+<main class="paintings_main" style="text-align: unset">
     <h1>Paintings by ${name}</h1>
 
     <div class="topnav">
-        <p>Please feel free to <strong>enjoy and discover</strong> more about these <u>precious and wonderful</u>
-            paintings:</p>
+        <p><strong>Please feel free to enjoy and discover more about these <u>precious and wonderful</u>
+            paintings:</strong></p>
         <div class="search-container">
             <form style="margin-top: 13px" method="GET" action="searchPainting">
                 <input style="width: 300px" class="form-control" type="text" placeholder="Search.." name="name">
@@ -52,15 +52,15 @@
         </div>
     </div>
 
-    <div class="horizontal-scroll-wrapper squares">
+    <div class="horizontal-scroll-wrapper squares" style="">
         <c:forEach items="${wikiPaintings}" var="painting">
-            <div class="painting">
+            <div class="painting" style="display: inline-block">
+                <div class="right" style="padding-top: 0px; padding-left: 0px">
+                    <h4 style="padding-top: 0px; padding-left: 0px">${painting.title}</h4>
+                    <h5>${painting.artistName}</h5>
+                </div>
                 <div class="left">
-                    <img src="${painting.image}" alt="paintings images" sizes=""></div>
-                <div class="right">
-                    <h2>${painting.title}</h2>
-                    <h4>${painting.artistName}</h4>
-                    <a href="https://www.louvre.fr/en/">Link</a>
+                    <img src="${painting.image}" alt="paintings images" sizes="">
                 </div>
             </div>
         </c:forEach>
