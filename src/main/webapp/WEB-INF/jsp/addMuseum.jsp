@@ -45,7 +45,7 @@
 
 <form:form action="/museum" method="post" modelAttribute="museum">
     <form:errors path="*"  cssClass="errorblock" element="div/"/>
-    <form:label path="id">ID: ${museum.id}</form:label><form:hidden path="id" />
+    <form:label path="id"> ${museum.id}</form:label><form:hidden path="id" />
     <form:label path="name" cssErrorClass="error">NAME:  </form:label> <form:input path="name" type="text" cssErrorClass="error"/>
     <form:label path="location" cssErrorClass="error">LOCATION:  </form:label> <form:input path="location" type="text" cssErrorClass="error"/>
     <input id="submit" type="submit" value="submit">
