@@ -58,5 +58,6 @@ public class WikiArtPaintingRetrieval
         JavaType returnType = OBJECT_MAPPER.getTypeFactory()
                 .constructCollectionType(List.class, WikiArtPainting.class);
         return  OBJECT_MAPPER.readValue(trimmedBody, returnType);
+
     }
 }
