@@ -81,6 +81,7 @@
     <form:label path="location" cssErrorClass="error"><b><font color="#f0ffff">     🏛️ NAME:</font></b>  </form:label> <form:input path="location" type="text" cssErrorClass="error"/>
     <form:label path="name" cssErrorClass="error"><b><font color="#f0ffff"> 📍 LOCATION: </font></b> </form:label> <form:input path="name" type="text" cssErrorClass="error"/>
     <form:label path=""><b><font color="#f0ffff">  🎫 QUANTITY: </font></b></form:label>
+    <form:hidden path="imagePath"/>
     <form:select path="availableQuantity">
         <form:option value="1" label="1"/>
         <form:option value="2" label="2"/>
