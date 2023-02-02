@@ -40,7 +40,7 @@
 <h1>Add/Edit Museum</h1>
 
 <c:if test="${addMuseumSuccess}">
-    <div>Successfully added Museum with Name: ${addMuseumName}</div>
+    <div id="success">Successfully added Museum with Name: ${addMuseumName}</div>
 </c:if>
 
 <form:form action="/museum" method="post" modelAttribute="museum">
@@ -48,7 +48,7 @@
     <form:label path="id">ID: ${museum.id}</form:label><form:hidden path="id" />
     <form:label path="name" cssErrorClass="error">NAME:  </form:label> <form:input path="name" type="text" cssErrorClass="error"/>
     <form:label path="location" cssErrorClass="error">LOCATION:  </form:label> <form:input path="location" type="text" cssErrorClass="error"/>
-    <input type="submit" value="submit">
+    <input id="submit" type="submit" value="submit">
 </form:form>
 </body>
 </html>

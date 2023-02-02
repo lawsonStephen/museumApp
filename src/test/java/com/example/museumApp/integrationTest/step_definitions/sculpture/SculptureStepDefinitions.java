@@ -1,7 +1,8 @@
-package com.example.museumApp.integrationTest.step_definitions;
+package com.example.museumApp.integrationTest.step_definitions.sculpture;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,10 +11,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NavigatingStepDefinitions {
+public class SculptureStepDefinitions {
 
     WebDriver driver;
 
@@ -27,6 +30,7 @@ public class NavigatingStepDefinitions {
         driver.close();
     }
 
+
     @Given("I have a browser open")
     public void i_have_a_browser_open() {
         driver = new ChromeDriver();
@@ -35,11 +39,6 @@ public class NavigatingStepDefinitions {
     public void i_navigate_to(String url) {
         driver.get(url);
     }
-    @Then("I am on the {string} page")
-    public void i_am_on_the_page(String title) {
-        String pageTitle = driver.getTitle();
-        assertTrue(pageTitle.contains(title));
-    }
 
     @When("I enter {string} in the name box")
     public void i_enter_in_the_name_box(String name) {
@@ -47,18 +46,7 @@ public class NavigatingStepDefinitions {
         nameBox.clear();
         nameBox.sendKeys(name);
     }
-    @When("I Enter {string} in the birthplace box")
-    public void i_enter_in_the_birthplace_box(String birthplace) {
-        WebElement birthplaceBox = driver.findElement(By.id("birthplace"));
-        birthplaceBox.clear();
-        birthplaceBox.sendKeys(birthplace);
-    }
-    @When("I Enter {string} in the birth_year box")
-    public void i_enter_in_the_birth_year_box(String birth_year) {
-        WebElement birth_yearBox = driver.findElement(By.id("birth_year"));
-        birth_yearBox.clear();
-        birth_yearBox.sendKeys(birth_year);
-    }
+
     @When("I click the submit button")
     public void i_click_the_submit_button() {
         WebElement submit = driver.findElement(By.id("submit"));
@@ -73,10 +61,46 @@ public class NavigatingStepDefinitions {
 
     @Then("I see the {string} error message")
     public void i_see_the_error_message(String expected) {
-        WebElement errorBlock = driver.findElement(By.id("artist.errors"));
+        WebElement errorBlock = driver.findElement(By.id("sculpture.errors"));
         String message = errorBlock.getText();
         assertTrue(message.contains(expected));
     }
 
+    @And("I Select {string} from the artist dropdown")
+    public void iSelectArtistFromTheDropdown(String artist) {
+        WebElement artistBox = driver.findElement(By.id("artist"));
+        Select select = new Select(artistBox);
+        select.selectByVisibleText(artist);
 
+    }
+
+    @And("I Enter {string} in the sculpture_price box")
+    public void iEnterInTheSculpture_priceBox(String price) {
+        WebElement sculpture_priceBox = driver.findElement(By.id("sculpture_price"));
+        sculpture_priceBox.clear();
+        sculpture_priceBox.sendKeys(price);
+    }
+
+    @And("I Enter {string} in the sculpture_year box")
+    public void iEnterInTheSculpture_yearBox(String year) {
+        WebElement sculpture_yearBox = driver.findElement(By.id("sculpture_year"));
+        sculpture_yearBox.clear();
+        sculpture_yearBox.sendKeys(year);
+    }
+
+    @And("I Select {string} from the museum dropdown")
+    public void iSelectMuseumFromTheMuseumDropdown(String museum) {
+        WebElement museumBox = driver.findElement(By.id("museum"));
+        Select select = new Select(museumBox);
+        select.selectByVisibleText(museum);
+    }
+
+
+    @Then("the sculpture_year of Thinker displays as 2020")
+    public void theSculpture_yearOfThinkerDisplaysAs() {
+        WebElement sculpture_year = driver.findElement(By.xpath("/html/body/main/table/tbody/tr[3]/td[2]"));
+        int new_year = Integer.parseInt(sculpture_year.getText());
+
+        assertEquals(2020,new_year );
+    }
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Museum</title>
+    <title>Artist</title>
 
     <style>
 
@@ -94,7 +94,7 @@
     <c:forEach items="${artists}" var="artist">
         <tr>
             <th scope="row"><a href="
-                   <c:url value = "/museum/edit">
+                   <c:url value = "/artist/edit">
                     <c:param name="id" value="${artist.id}" />
                     </c:url>
                     "
