@@ -110,6 +110,14 @@ public class SearchController
 
     }
 
+    @GetMapping("searchArtist")
+    public String searchArtistByName(@PathParam("name") String name, Model model)
+    {
+        List<Artist> artists = artistService.findByName(name);
+        model.addAttribute("artists", artists);
+        return "artists";
+    }
+
 
 
 
