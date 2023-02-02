@@ -20,6 +20,10 @@ body h1 {
     margin-bottom: 30px;
 }
 
+body h2, h3, h4, p {
+    color:  #172755;
+}
+
 header {
     margin: auto;
     background-position: top center;
@@ -55,7 +59,7 @@ body a:hover {
 
 button {
     background-color: #cb8501;
-    border-radius: 20px;;
+    /*border-radius: 20px;*/
     text-align: center;
     color: #EAEDF4;
     font-size: 18px;
@@ -89,13 +93,13 @@ button:hover {
 
 
 
-/* menu de navegación*/
+/* Nav menu*/
 nav {
     text-align: center;
 }
 
 .nav_container {
-    padding-top: 10px;
+    padding-top: 3.5px;
 }
 
 nav ul.menu {
@@ -223,8 +227,6 @@ nav a:hover {
     top: 0;
     bottom: 0;
     left: 0;
-    /*height: 700px;*/
-    /*display: inline-grid;*/
 }
 
 .left img {
@@ -238,7 +240,7 @@ nav a:hover {
 .right {
     float: right;
     width: 550px;
-    padding: 0 8px 0 8px;
+    padding: 200px 8px 0 8px;
     box-sizing: border-box;
     display: inline; /*contents */
     text-align: left;

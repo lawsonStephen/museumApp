@@ -59,15 +59,15 @@
                     <img src="${painting.imagePath}" alt="paintings images" sizes=""></div>
                 <div class="right">
                     <h2>${painting.name}</h2>
-                    <h4>${painting.artist.name}</h4>
-                    <p>Description here jkadsfjasfnandfc fqehfquafgweaf qfefqefwefg qfgwqmqoqirb agegsegswh</p>
-                    <a href="https://www.louvre.fr/en/">Link</a>
+                    <h4>By ${painting.artist.name}</h4>
+                    <p>${painting.description}</p>
+                    <a href="${painting.link}">More in Wikipedia</a>
                 </div>
             </div>
         </c:forEach>
     </div>
 
-    <table class="table table-dark">
+    <table class="table table-dark" style="background-color: #172755">
         <thead>
         <tr>
             <th class="col" style="width: 60px">ID</th>

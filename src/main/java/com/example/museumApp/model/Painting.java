@@ -24,6 +24,11 @@ public class Painting {
 
     @Column(name="LINK")
     private String link;
+
+    @Column(name="DESCRIPTION")
+    @Lob
+    private String description;
+
     @ManyToOne
     @JoinColumn(name="ARTIST_ID")
     private Artist artist;
@@ -95,5 +100,11 @@ public class Painting {
         this.imagePath = imagePath;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

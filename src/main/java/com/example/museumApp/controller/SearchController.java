@@ -22,8 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-public class SearchController
-{
+public class SearchController {
     @Autowired
     private MuseumService museumService;
 
@@ -40,8 +39,7 @@ public class SearchController
     private PaintingService paintingService;
 
     @GetMapping("searchMuseum")
-    public ModelAndView findMuseum(@PathParam("name") String name)
-    {
+    public ModelAndView findMuseum(@PathParam("name") String name) {
         ModelAndView model = new ModelAndView("museums");
         List<Museum> museums = museumService.findByName(name);
 
@@ -50,15 +48,14 @@ public class SearchController
     }
 
     @GetMapping("museumsByArtist")
-    public ModelAndView findMuseumsByArtistId(@PathParam("id") Long id)
-    {
+    public ModelAndView findMuseumsByArtistId(@PathParam("id") Long id) {
 
         List<Sculpture> sculptures = sculptureService.findByAuthorId(id);
         List<Museum> museums = sculptures
-            .stream()
-            .map(Sculpture::getMuseum)
-            .distinct()
-            .collect(Collectors.toList());
+                .stream()
+                .map(Sculpture::getMuseum)
+                .distinct()
+                .collect(Collectors.toList());
 
         List<Painting> paintings = paintingService.findByAuthorId(id);
         List<Museum> museums1 = paintings
@@ -73,14 +70,13 @@ public class SearchController
 
         ModelAndView model = new ModelAndView("museumsByArtist");
         model.addObject("artist", artist);
-        model.addObject("museums",museums);
+        model.addObject("museums", museums);
         return model;
 
     }
 
     @GetMapping("searchPainting")
-    public ModelAndView findPainting(@PathParam("name") String name)
-    {
+    public ModelAndView findPainting(@PathParam("name") String name) {
         ModelAndView model = new ModelAndView("paintings");
         List<Painting> paintings = paintingService.findByName(name);
 
@@ -88,15 +84,27 @@ public class SearchController
         return model;
     }
 
+    @GetMapping("searchSculpture")
+    public ModelAndView findSculpture(@PathParam("name") String name) {
+        ModelAndView model = new ModelAndView("sculptures");
+        List<Sculpture> sculptures = sculptureService.findByName(name);
+        if (sculptures.size() == 0) {
+            List<Sculpture> artistsSculptures = sculptureService.findByArtistName(name);
+            model.addObject("sculptures", artistsSculptures);
+        } else {
+            model.addObject("sculptures", sculptures);
+        }
+
+        return model;
+    }
+
     @GetMapping("exchange")
-    public String exchangePage(@PathParam("museumName") String museumName)
-    {
+    public String exchangePage(@PathParam("museumName") String museumName) {
         return "exchanges";
     }
 
     @GetMapping("exchangeArtifact")
-    public String exchangeArtifact(@PathParam("museumName") String museumName, @PathParam("sculptureId") Long sculptureId, Model model)
-    {
+    public String exchangeArtifact(@PathParam("museumName") String museumName, @PathParam("sculptureId") Long sculptureId, Model model) {
         Museum museum = museumService.findByName(museumName).get(0);
         Sculpture sculpture = sculptureService.findById(sculptureId);
         sculpture.setMuseum(museum);
@@ -106,12 +114,11 @@ public class SearchController
     }
 
     @GetMapping("paintingsByArtist")
-    public String paintingsByArtist(@PathParam("id") Long id, Model model)
-    {
+    public String paintingsByArtist(@PathParam("id") Long id, Model model) {
         Artist artist = artistService.findById(id);
         List<WikiArtPainting> paintings = paintingRetrieval.getPaintingsFor(artist);
         paintings = paintings.stream()
-                .filter(x-> x.getArtistUrl().equals(artist.getArtistUrl()))
+                .filter(x -> x.getArtistUrl().equals(artist.getArtistUrl()))
                 .distinct()
                 .collect(Collectors.toList());
         model.addAttribute("name", artist.getName());
@@ -121,14 +128,11 @@ public class SearchController
     }
 
     @GetMapping("searchArtist")
-    public String searchArtistByName(@PathParam("name") String name, Model model)
-    {
+    public String searchArtistByName(@PathParam("name") String name, Model model) {
         List<Artist> artists = artistService.findByName(name);
         model.addAttribute("artists", artists);
         return "artists";
     }
-
-
 
 
 }

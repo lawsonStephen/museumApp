@@ -13,4 +13,7 @@ public interface SculptureRepository extends JpaRepository<Sculpture, Long> {
 
     @Query("select s from Sculpture s where s.name like %:name%")
     List<Sculpture> findByName(@Param("name") String name);
+
+    @Query("select s from Sculpture s where s.artist.name like %:name%")
+    List<Sculpture> findByArtistName(@Param("name")String name);
 }
