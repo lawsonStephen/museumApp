@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features="src/test/java/com/example/museumApp/integrationTest/features/painting",
-        glue = "com/example/museumApp/integrationTest/step_definitions/painting",
-        tags = "@UnderTest")
+        glue = "com/example/museumApp/integrationTest/step_definitions/painting")
 public class PaintingTestRunner {
 }
