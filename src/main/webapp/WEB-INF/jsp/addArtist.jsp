@@ -56,6 +56,7 @@
 </c:if>
 
 <form:form action="/artist" method="post" modelAttribute="artist">
+    <form:hidden path="artistUrl"/>
     <form:errors path="*"  cssClass="errorblock" element="div/"/>
     <form:label path="id"> ${artist.id}</form:label><form:hidden path="id" />
     <form:label path="name" cssErrorClass="error">NAME:  </form:label> <form:input path="name" type="text" cssErrorClass="error"/>
