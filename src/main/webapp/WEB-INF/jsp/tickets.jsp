@@ -96,5 +96,49 @@
     </form:select>
     <input class="buton" type="submit" value="submit"></center>
 </form:form>
+
+
+
+
+
+
+<table class="table table-dark" style="background-color: #172755">
+    <thead>
+    <tr>
+        <th class="col" style="width: 60px">Customer</th>
+        <th class="col" style="width: 60px">Museum</th>
+        <th class="col" style="width: 60px">Quantity</th>
+        <th class="col" style="width: 180px">Unit Price</th>
+    </tr>
+    </thead>
+    <tbody>
+
+
+    <c:forEach items="${customer.invoices}" var="invoice">
+        <tr>
+
+            <td>${customer.name}</td>
+            <td>${invoice.museum}</td>
+            <td>${invoice.quantity}</td>
+            <td>20</td>
+
+    </c:forEach>
+
+
+    </tbody>
+    <br>
+
+
+</table>
+
+<br>
+
+<form method="get" action="pay">
+    <input class="buton" type="submit" value="Checkout">
+</form>
+<br>
+<form method="get" action="logout">
+    <input class="buton" type="submit" value="Leave for now">
+</form>
 </body>
 </html>

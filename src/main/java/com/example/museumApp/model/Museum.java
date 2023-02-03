@@ -70,4 +70,16 @@ public class Museum {
     public void setPrice(float price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Museum{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", imagePath='" + imagePath + '\'' +
+                ", availableQuantity=" + availableQuantity +
+                ", price=" + price +
+                '}';
+    }
 }

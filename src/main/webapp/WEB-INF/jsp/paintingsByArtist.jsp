@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -7,21 +6,19 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href=styles.css>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Painting</title>
 </head>
-<body>
-
 <header class="header_main">
     <div class="header_menu">
-        <%--<div class="logo">
-            <a href="index.html"><img src="images/logo-header.svg" alt="logotype"></a>
-        </div>--%>
         <div class="nav_container">
             <nav>
                 <ul class="menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/painting">Paintings</a></li>
+                    <li><a href="/museum">Museums</a></li>
                     <li><a href="/artist">Artists</a></li>
+                    <li><a href="/painting">Paintings</a></li>
                     <li><a href="/sculpture">Sculptures</a></li>
                 </ul>
             </nav>
@@ -29,7 +26,7 @@
         <div class="nav_sign">
             <nav>
                 <ul class="menu">
-                    <li><a href="/museum">Museums</a></li>
+                    <li><a href="/exchange">Exchange Art</a></li>
                     <li><a href="/logout" class="button">
                         <button>Log out</button>
                     </a></li>
@@ -38,27 +35,54 @@
         </div>
     </div>
 </header>
-<h1>Paintings</h1>
 
-<table>
-    <thead>
-    <tr>
-        <th>NAME</th>
-        <th>PAINTING_YEAR</th>
-        <th>ARTIST</th>
-        <th>PAINTING</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${wikiPaintings}" var="painting">
+<body>
+
+<main class="paintings_main">
+    <h1>Paintings by ${name}</h1>
+
+    <div class="topnav">
+        <p><strong>Please feel free to enjoy and discover more about these <u>precious and wonderful</u>
+            paintings:</strong></p>
+        <div class="search-container">
+            <form style="margin-top: 13px" method="GET" action="searchPainting">
+                <input style="width: 300px" class="form-control" type="text" placeholder="Search.." name="name">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="horizontal-scroll-wrapper squares">
+        <c:forEach items="${wikiPaintings}" var="painting">
+            <div class="painting">
+                <div class="left">
+                    <img src="${painting.image}" alt="paintings images" sizes=""></div>
+                <div class="right">
+                    <h2>${painting.title}</h2>
+                    <h4>By ${painting.artistName}</h4>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
+
+    <table class="table table-dark" style="background-color: #172755">
+        <thead>
         <tr>
-            <td>${painting.title}</td>
-            <td>${painting.completitionYear}</td>
-            <td>${painting.artistName}</td>
-            <td><img src="${painting.image}" width="80px" height="60px"/></td>
+            <th class="col" style="width: 80px">NAME</th>
+            <th class="col" style="width: 80px">PAINTING_YEAR</th>
+            <th class="col" style="width: 80px">ARTIST</th>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        <c:forEach items="${wikiPaintings}" var="painting">
+            <tr>
+                <td>${painting.title}</td>
+                <td>${painting.completitionYear}</td>
+                <td>${painting.artistName}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</main>
 </body>
 </html>
