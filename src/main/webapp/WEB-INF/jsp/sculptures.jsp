@@ -59,8 +59,8 @@
                 <div class="right">
                     <h2>${sculpture.name}</h2>
                     <h4>${sculpture.artist.name}</h4>
-                    <p>Description here jkadsfjasfnandfc fqehfquafgweaf qfefqefwefg qfgwqmqoqirb agegsegswh</p>
-                    <a href="https://www.louvre.fr/en/">Link</a>
+                    <p>${sculpture.description}</p>
+                    <a href="${sculpture.link}">Discover more in Wikipedia</a>
                 </div>
             </div>
         </c:forEach>
@@ -74,6 +74,7 @@
             <th class="col" style="width: 60px">SCULPTURE_PRICE</th>
             <th class="col" style="width: 60px">ARTIST</th>
             <th class="col" style="width: 60px">MUSEUM</th>
+            <th class="col" style="width: 60px">IMAGES</th>
         </tr>
         </thead>
         <tbody>
@@ -91,6 +92,7 @@
                 <td>${sculpture.sculpture_price}</td>
                 <td>${sculpture.artist.name}</td>
                 <td>${sculpture.museum.name}</td>
+                <td><img src="${sculpture.imagePath}" width="40" height="40"></td>
             </tr>
         </c:forEach>
         </tbody>

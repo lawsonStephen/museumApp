@@ -23,6 +23,10 @@ public class Museum {
     @Column(name="PRICE")
     private float price;
 
+    @Column(name="DESCRIPTION")
+    @Lob
+    private String description;
+
     public String getImagePath() {
         return imagePath;
     }
@@ -81,5 +85,13 @@ public class Museum {
                 ", availableQuantity=" + availableQuantity +
                 ", price=" + price +
                 '}';
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

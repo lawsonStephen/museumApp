@@ -56,14 +56,14 @@
         <div>
             <nav>
                 <form style="margin-top: 13px" method="GET" action="searchMuseum">
-                    <input class="form-control" type="text" value="search" name="name">
+                    <input class="form-control" type="text" value="search" name="name" placeholder="Search a museum">
                 </form>
             </nav>
         </div>
     </div>
 </header>
-<h1><center><font color="#00008b"> Buy your Museum Ticket for <b>${museum.location}, ${museum.name}</b> now!</font></center></h1>
-<h4><center><font color="#00008b"> Don't miss out on your tickets today</font></center></h4>
+<h1><center><font color="#172755"> Buy your Museum Ticket for <b>${museum.location}, ${museum.name}</b> now!</font></center></h1>
+<h4><center><font color="#172755"> Don't miss out on your tickets today</font></center></h4>
 <h5></h5>
 
 <div class="col"><center>
@@ -133,12 +133,12 @@
 
 <br>
 
-<form method="get" action="pay">
-    <input class="buton" type="submit" value="Checkout">
+<form method="get" action="pay" style="margin: auto; text-align: center;">
+    <input class="buton" type="submit" value="Pay now">
 </form>
 <br>
-<form method="get" action="logout">
-    <input class="buton" type="submit" value="Bye now">
+<form method="get" action="logout" style="margin: auto; text-align: center; padding: 3px 55px;">
+    <input class="buton" type="submit" value="Sign out">
 </form>
 </body>
 </html>

@@ -7,9 +7,10 @@
 <head>
     <title>Add Painting</title>
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href=styles.css />
 
 </head>
+<body>
 <header class="header_main">
     <div class="header_menu">
         <div class="nav_container">
@@ -26,7 +27,7 @@
         <div class="nav_sign">
             <nav>
                 <ul class="menu">
-                    <li><a href="/exchange">Exchange Artifact</a></li>
+                    <li><a href="/exchange">Exchange Art</a></li>
                     <li><a href="/logout" class="button">
                         <button>Log out</button>
                     </a></li>
@@ -36,7 +37,6 @@
     </div>
 </header>
 
-<body>
 <h1>Add/Edit Painting</h1>
 
 <c:if test="${addPaintingSuccess}">

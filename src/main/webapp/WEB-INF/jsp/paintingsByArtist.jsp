@@ -10,6 +10,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Painting</title>
 </head>
+<body>
 <header class="header_main">
     <div class="header_menu">
         <div class="nav_container">
@@ -35,8 +36,6 @@
         </div>
     </div>
 </header>
-
-<body>
 
 <main class="paintings_main">
     <h1>Paintings by ${name}</h1>
