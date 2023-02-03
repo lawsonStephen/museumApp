@@ -51,17 +51,15 @@
 </header>
 
 
-
 <br><br>
-<form:form action="/login" method="get" modelAttribute="museum">
-    <label for="username">username:</label><input type="text" name="username"/><br>
-    <label for="password">password:</label><input type="password" name="password"/><br>
-    <form:hidden path="id" value="${museum.id}"/>
-    <input class="buton" type="submit" value="Submit">
-</form:form>
-
-
-
+<div class="login" style="margin: auto; width: 50%; text-align: center">
+    <form:form action="/login" method="get" modelAttribute="museum">
+        <label for="username" style="padding-left: 10px">username: </label><input type="text" name="username"/><br>
+        <label for="password" style="padding-left: 10px">password: </label><input type="password" name="password"/><br>
+        <form:hidden path="id" value="${museum.id}"/>
+        <input class="buton" type="submit" value="Submit" style="margin-top: 12px; padding: 0 110px;">
+    </form:form>
+</div>
 
 
 </body>

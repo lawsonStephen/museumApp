@@ -35,18 +35,15 @@
     </style>
 </head>
 <body class="with-img">
-<%--ackground-color: burlywood;--%>
 <header class="header_main">
     <div class="header_menu">
-        <%--<div class="logo">
-            <a href="index.html"><img src="images/logo-header.svg" alt="logotype"></a>
-        </div>--%>
         <div class="nav_container">
             <nav>
                 <ul class="menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/painting">Paintings</a></li>
+                    <li><a href="/museum">Museums</a></li>
                     <li><a href="/artist">Artists</a></li>
+                    <li><a href="/painting">Paintings</a></li>
                     <li><a href="/sculpture">Sculptures</a></li>
                 </ul>
             </nav>
@@ -54,25 +51,19 @@
         <div class="nav_sign">
             <nav>
                 <ul class="menu">
-                    <li><a href="/museum"> Museums</a></li>
+                    <li><a href="/exchange">Exchange Art</a></li>
                     <li><a href="/logout" class="button">
                         <button>Log out</button>
                     </a></li>
                 </ul>
             </nav>
         </div>
-        <div>
-            <nav>
-                <form style="margin-top: 13px" method="GET" action="searchMuseum">
-                    <input class="form-control" type="text" value="search" name="name">
-                </form>
-            </nav>
-        </div>
     </div>
 </header>
+
 <h1 style="text-align: center">Exchange artifacts</h1>
 
-<div>
+<div style="margin-left: 60px">
     <form method="get" action="exchangeArtifact">
         <select class="form-select form-select-lg mb-3 exchange-options" aria-label="Default select example" name="sculptureId">
             <option selected disabled>Choose sculpture</option>

@@ -21,7 +21,12 @@ public class Sculpture {
     @Column(name="IMAGE_PATH")
     private String imagePath;
 
+    @Column(name="LINK")
     private String link;
+
+    @Column(name="DESCRIPTION")
+    @Lob
+    private String description;
     @ManyToOne
     @JoinColumn(name="ARTIST_ID")
     private Artist artist;
@@ -91,5 +96,13 @@ public class Sculpture {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

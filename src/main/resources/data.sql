@@ -1,23 +1,22 @@
-INSERT INTO MUSEUM (id, IMAGE_PATH, location, name, AVAILABLE_QUANTITY, PRICE)
-VALUES (default, 'images/prado.jpeg', 'Madrid', 'Prado', 10, 10),
-       (default, 'images/louvre.jpeg', 'Paris', 'Louvre', 10, 10),
-       (default, 'images/britishMuseum.jpeg', 'London', 'British Museum', 10, 10),
-       (default, 'images/nationalGallery.jpeg', 'London', 'National Gallery', 10, 10),
-       (default, 'images/accademia.jpeg', 'Florence', 'Accademia', 10, 10),
-       (default, 'images/stPeter.jpeg', 'Vatican City', 'St Peters Basilica', 10, 10),
-       (default, 'images/sistine.jpeg', 'Vatican City', 'Sistine Chapel', 10, 10),
-       (default, 'images/vanGoghMuseum.jpeg', 'Amsterdam', 'Van Gogh Museum', 10, 10),
-       (default, 'images/nationalHistory.jpeg', 'New York', 'American Museum of Natural History', 10, 10),
-       (default, 'images/smithsonian.jpeg', 'Washington D.C.', 'Smithsonian National Museum of American History', 10,
-        10),
-       (default, 'images/tateModern.jpeg', 'London', 'Tate Modern', 10, 10),
-       (default, 'images/uffizi.jpeg', 'Florence', 'Uffizi Gallery', 10, 10),
-       (default, 'images/hermitage.jpeg', 'St Petersburg', 'Hermitage Museum', 10, 10),
-       (default, 'images/rijksmuseum.jpeg', 'Amsterdam', 'Rijksmuseum', 10, 10),
-       (default, 'images/dOrsay.jpeg', 'Paris', 'Musée dOrsay', 10, 10),
-       (default, 'images/moma.jpeg', 'New York', 'Museum of Modern Art', 10, 10),
-       (default, 'images/nmok.jpeg', 'Seoul', 'National Museum of Korea', 10, 10),
-       (default, 'images/pergamon.jpeg', 'Berlin', 'Pergamon Museum', 10, 10);
+INSERT INTO MUSEUM (id, IMAGE_PATH, location, name, AVAILABLE_QUANTITY, PRICE, DESCRIPTION)
+VALUES (default, 'images/prado.jpeg', 'Madrid', 'Prado', 10, 10, 'The Prado Museum, officially known as Museo Nacional del Prado, is the main Spanish national art museum, located in central Madrid. It is widely considered to house one of the world''s finest collections of European art, dating from the 12th century to the early 20th century, based on the former Spanish royal collection, and the single best collection of Spanish art.'),
+       (default, 'images/louvre.jpeg', 'Paris', 'Louvre', 10, 10, 'The Louvre, or the Louvre Museum, is the world''s most-visited museum, and a historic landmark in Paris, France. It is the home of some of the best-known works of art, including the Mona Lisa and the Venus de Milo.'),
+       (default, 'images/britishMuseum.jpeg', 'London', 'British Museum', 10, 10, 'The British Museum is a public museum dedicated to human history, art and culture located in the Bloomsbury area of London. Its permanent collection of eight million works is among the largest and most comprehensive in existence. It documents the story of human culture from its beginnings to the present.'),
+       (default, 'images/nationalGallery.jpeg', 'London', 'National Gallery', 10, 10, 'The National Gallery is an art museum in Trafalgar Square in the City of Westminster, in Central London, England. Founded in 1824, in Trafalgar Square since 1838, it houses a collection of over 2,300 paintings dating from the mid-13th century to 1900.'),
+       (default, 'images/accademia.jpeg', 'Florence', 'Accademia', 10, 10, 'The Accademia Gallery of Venice is an essential visit for painting enthusiasts; it is the most important museum that you can visit during your stay in Venice. The Academy was intended to bring together under one roof all the works of art that were scattered throughout Venice.'),
+       (default, 'images/stPeter.jpeg', 'Vatican City', 'St Peters Basilica', 10, 10, 'The Papal Basilica of Saint Peter in the Vatican, or simply Saint Peter''s Basilica, is a church built in the Renaissance style located in Vatican City, the papal enclave that is within the city of Rome, Italy.'),
+       (default, 'images/sistine.jpeg', 'Vatican City', 'Sistine Chapel', 10, 10, 'The Sistine Chapel is a chapel in the Apostolic Palace, the official residence of the pope in Vatican City. Originally known as the Cappella Magna, the chapel takes its name from Pope Sixtus IV, who had it built between 1473 and 1481'),
+       (default, 'images/vanGoghMuseum.jpeg', 'Amsterdam', 'Van Gogh Museum', 10, 10, 'The Van Gogh Museum is a Dutch art museum dedicated to the works of Vincent van Gogh and his contemporaries in the Museum Square in Amsterdam South, close to the Stedelijk Museum, the Rijksmuseum, and the Concertgebouw.'),
+       (default, 'images/nationalHistory.jpeg', 'New York', 'American Museum of Natural History', 10, 10, 'The American Museum of Natural History is a natural history museum on the Upper West Side of Manhattan in New York City. The Museum is renowned for its exhibitions and scientific collections, which serve as a field guide to the entire planet and present a panorama of the world''s cultures.'),
+       (default, 'images/smithsonian.jpeg', 'Washington D.C.', 'Smithsonian National Museum of American History', 10, 10, 'The National Museum of American History: Kenneth E. Behring Center collects, preserves, and displays the heritage of the United States in the areas of social, political, cultural, scientific, and military history. Among the items on display is the original Star-Spangled Banner.'),
+       (default, 'images/tateModern.jpeg', 'London', 'Tate Modern', 10, 10, 'Tate is an institution that houses, in a network of four art galleries, the United Kingdom''s national collection of British art, and international modern and contemporary art. It is not a government institution, but its main sponsor is the UK Department for Digital, Culture, Media and Sport'),
+       (default, 'images/uffizi.jpeg', 'Florence', 'Uffizi Gallery', 10, 10, 'The Uffizi Gallery entirely occupies the first and second floors of the large building constructed between 1560 and 1580 and designed by Giorgio Vasari. It is famous worldwide for its outstanding collections of ancient sculptures and paintings (from the Middle Ages to the Modern period).'),
+       (default, 'images/hermitage.jpeg', 'St Petersburg', 'Hermitage Museum', 10, 10, 'The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia. It is the largest art museum in the world by gallery space. It was founded in 1764 when Empress Catherine the Great acquired an impressive collection of paintings from the Berlin merchant Johann Ernst Gotzkowsky'),
+       (default, 'images/rijksmuseum.jpeg', 'Amsterdam', 'Rijksmuseum', 10, 10, 'The Rijksmuseum is the national museum of the Netherlands dedicated to Dutch arts and history and is located in Amsterdam. The museum is located at the Museum Square in the borough of Amsterdam South, close to the Van Gogh Museum, the Stedelijk Museum Amsterdam, and the Concertgebouw.'),
+       (default, 'images/dOrsay.jpeg', 'Paris', 'Musée dOrsay', 10, 10, 'The Musée d''Orsay is a museum in Paris, France, on the Left Bank of the Seine. It is housed in the former Gare d''Orsay, a Beaux-Arts railway station built between 1898 and 1900. The museum holds mainly French art dating from 1848 to 1914, including paintings, sculptures, furniture, and photography.'),
+       (default, 'images/moma.jpeg', 'New York', 'Museum of Modern Art', 10, 10, 'The Museum of Modern Art is an art museum located in Midtown Manhattan, New York City, on 53rd Street between Fifth and Sixth Avenues. It plays a major role in developing and collecting modern art, and is often identified as one of the largest and most influential museums of modern art in the world.'),
+       (default, 'images/nmok.jpeg', 'Seoul', 'National Museum of Korea', 10, 10, 'The National Museum of Korea is the flagship museum of Korean history and art in South Korea and is the cultural organization that represents Korea. The museum holds an immense collection: it has more than 310,000 historically valuable and highly aesthetic relics ranging from the Paleolithic Age to the early 20th century, and more than 12,000 masterpieces of its collection are always on display in its permanent exhibition hall.'),
+       (default, 'images/pergamon.jpeg', 'Berlin', 'Pergamon Museum', 10, 10, 'The Pergamon Museum is a listed building on the Museum Island in the historic centre of Berlin. It was built from 1910 to 1930 by order of German Emperor Wilhelm II according to plans by Alfred Messel and Ludwig Hoffmann in Stripped Classicism style.');
 
 INSERT INTO ARTIST (id, name, birthplace, birth_year, ARTIST_URL)
 VALUES (default, 'Michelangelo', 'Italy', 1475, 'michelangelo'),
@@ -42,24 +41,40 @@ VALUES (default, 'Michelangelo', 'Italy', 1475, 'michelangelo'),
        (default, 'Cezanne', 'France', 1839, 'paul-cezanne'),
        (default, 'Pollock', 'United States', 1912, 'jackson-pollock');
 
-INSERT INTO SCULPTURE (id, name, sculpture_year, sculpture_price, artist_id, museum_id, IMAGE_PATH)
+INSERT INTO SCULPTURE (id, name, sculpture_year, sculpture_price, artist_id, museum_id, IMAGE_PATH, DESCRIPTION, LINK)
 VALUES (default, 'David', 1501, 100, select id from artist where name = 'Michelangelo', select id from museum where
-        name = 'Accademia', 'images/sculptures/David.jpg'),
+        name = 'Accademia', 'images/sculptures/David.jpg',
+        'David is a masterpiece of Renaissance sculpture, created in marble between 1501 and 1504 by the Italian artist Michelangelo. David is a 5.17-metre marble statue of the Biblical figure David, a favoured subject in the art of Florence.',
+        'https://en.wikipedia.org/wiki/David_(Michelangelo)'),
        (default, 'Woman Aflame', 1980, 4.7, (select id from artist where name = 'Dali'),
-        (select id from museum where name = 'Museum of Modern Art'), 'images/sculptures/Woman Aflame.jpg'),
+        (select id from museum where name = 'Museum of Modern Art'), 'images/sculptures/Woman Aflame.jpg',
+        'This sculpture unites two of Dalí’s obsessions: fire, and a female figure with drawers. The flames seem to have a life of their own, and represent the hidden intensity of unconscious desire, while the drawers represent the mystery of hidden secrets. This beautiful faceless woman symbolizes all women. For Dali, a woman’s mystery is her true beauty.',
+        'https://www.daliparis.com/en/gallery-item/woman-aflame/'),
        (default, 'Dying Slave', 1516, 1.5, select id from artist where name = 'Michelangelo', select id from museum
-        where name = 'Louvre', 'images/sculptures/Dying Slave.jpg'),
+        where name = 'Louvre', 'images/sculptures/Dying Slave.jpg',
+        'The Dying Slave is a sculpture by the Italian Renaissance artist Michelangelo. Created between 1513 and 1516, it was to serve with another figure, the Rebellious Slave, at the tomb of Pope Julius II. It is a marble figure 2.15 metres in height, and is held at the Louvre, Paris.',
+        'https://en.wikipedia.org/wiki/Dying_Slave'),
        (default, 'Thinker', 1904, 80, select id from artist where name = 'Rodin', select id from museum where name =
-        'Louvre', 'images/sculptures/Thinker.jpg'),
+        'Louvre', 'images/sculptures/Thinker.jpg',
+        'The Thinker is a bronze sculpture by Auguste Rodin, usually placed on a stone pedestal. The work depicts a nude male figure of heroic size sitting on a rock. He is seen leaning over, his right elbow placed on his left thigh, holding the weight of his chin on the back of his right hand.',
+        'https://en.wikipedia.org/wiki/The_Thinker'),
        (default, 'Saint Mark', 1411, 7.5, select id from artist where name = 'Donatello', select id from museum where
-        name = 'Louvre', 'images/sculptures/Saint Mark.jpg'),
+        name = 'Louvre', 'images/sculptures/Saint Mark.jpg',
+        'Donatello''s Saint Mark is a marble statue that stands approximately seven feet and nine inches high and is displayed in the museum of the Orsanmichele church, Florence. It originally was displayed in an exterior niche of the church, where a copy now stands.',
+        'https://en.wikipedia.org/wiki/Saint_Mark_(Donatello)'),
        (default, 'Pieta', 1499, 5, select id from artist where name = 'Michelangelo', select id from museum where name =
-        'St Peters Basilica', 'images/sculptures/Pieta.jpg'),
+        'St Peters Basilica', 'images/sculptures/Pieta.jpg',
+        'The Pietà is a subject in Christian art depicting the Blessed Virgin Mary cradling the mortal body of Jesus Christ after his Descent from the Cross. It is most often found in sculpture.',
+        'https://en.wikipedia.org/wiki/Piet%C3%A0'),
        (default, 'Bacchus', 1497, 4.5, (select id from artist where name = 'Michelangelo'),
-        (select id from museum where name = 'Museum of Modern Art'), 'images/sculptures/Bacchus.jpg'),
+        (select id from museum where name = 'Sistine Chapel'), 'images/sculptures/Bacchus.jpg',
+        'In ancient Greek religion and myth, Dionysus (/daɪ.əˈnaɪsəs/; Ancient Greek: Διόνυσος Dionysos) is the god of the grape-harvest, winemaking, orchards and fruit, vegetation, fertility, festivity, insanity, ritual madness, religious ecstasy, and theatre.[2][3] The Romans called him Bacchus (/ˈbækəs/ or /ˈbɑːkəs/; Ancient Greek: Βάκχος Bacchos)[4] for a frenzy he is said to induce called baccheia. ',
+        'https://en.wikipedia.org/wiki/Dionysus'),
        (default, 'Brillo Boxes', 1964, 1.8, (select id from artist where name = 'Warhol'),
         (select id from museum where name = 'Smithsonian National Museum of American History'),
-        'images/sculptures/Brillo Boxes.PNG');
+        'images/sculptures/Brillo Boxes.PNG',
+        'Andy Warhol''s Brillo Boxes are precise copies of commercial packaging. While they fulfill the idea that art should imitate life, they also raise questions about how we identify and value something as art. If Warhol transformed a mundane commercial product into a work of art, how did that transformation happen?',
+        'https://philamuseum.org/collection/object/89204#:~:text=Andy%20Warhol''s%20Brillo%20Boxes%20are,how%20did%20that%20transformation%20happen%3F');
 
 INSERT INTO PAINTING (id, IMAGE_PATH, name, painting_price, painting_year, museum_id, artist_id, LINK, DESCRIPTION)
 VALUES (default, 'images/paintings/The Starry Night.jpg', 'The Starry Night', 117, 1890, SELECT id FROM museum WHERE

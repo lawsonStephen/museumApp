@@ -104,10 +104,7 @@
             >${museum.id}</a></th>
             <td>${museum.name}</td>
             <td>${museum.location}</td>
-            <td>"The Louvre, or the Louvre Museum, is the world's most-visited museum, and a historic landmark in Paris,
-                France. It is the home of some of the best-known works of art, including the Mona Lisa and the Venus de
-                Milo." - Wikipedia
-            </td>
+            <td>${museum.description}</td>
             <td><a href="https://www.louvre.fr/en">Link to the website</a></td>
         </tr>
     </c:forEach>

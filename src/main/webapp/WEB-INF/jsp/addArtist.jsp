@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href=styles.css>
+    <link rel="stylesheet" href=/src/main/resources/static/styles.css>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -22,6 +22,7 @@
 
     </style>
 </head>
+<body>
 <header class="header_main">
     <div class="header_menu">
         <div class="nav_container">
@@ -38,7 +39,7 @@
         <div class="nav_sign">
             <nav>
                 <ul class="menu">
-                    <li><a href="/exchange">Exchange Artifact</a></li>
+                    <li><a href="/exchange">Exchange Art</a></li>
                     <li><a href="/logout" class="button">
                         <button>Log out</button>
                     </a></li>
@@ -48,7 +49,6 @@
     </div>
 </header>
 
-<body>
 <h1>Add/Edit Artist</h1>
 
 <c:if test="${addArtistSuccess}">
