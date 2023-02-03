@@ -138,7 +138,7 @@
 </form>
 <br>
 <form method="get" action="logout">
-    <input class="buton" type="submit" value="Leave for now">
+    <input class="buton" type="submit" value="Bye now">
 </form>
 </body>
 </html>

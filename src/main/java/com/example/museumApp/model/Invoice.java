@@ -46,5 +46,13 @@ public class Invoice
         this.customer = customer;
     }
 
-
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "id=" + id +
+                ", museum='" + museum + '\'' +
+                ", quantity=" + quantity +
+                ", customer=" + customer +
+                '}';
+    }
 }

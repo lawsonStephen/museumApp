@@ -1,6 +1,7 @@
 package com.example.museumApp.controller;
 
 import com.example.museumApp.model.Customer;
+import com.example.museumApp.model.Invoice;
 import com.example.museumApp.model.Museum;
 import com.example.museumApp.repository.CustomerRepository;
 import com.example.museumApp.repository.InvoiceRepository;
@@ -10,7 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import javax.transaction.Transactional;
 import javax.websocket.server.PathParam;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -56,6 +60,22 @@ public class LoginController
     public String logout()
     {
         Customer.setCustomer(null);
+        return "museums";
+    }
+
+    @Transactional
+    @GetMapping("pay")
+    public String checkout()
+    {
+        System.out.println("--------------------------------");
+        System.out.println(invoiceRepository.findAll());
+//        Customer.getCustomer().getInvoices().forEach(invoiceRepository::delete);
+        invoiceRepository.deleteByCustomerId(Customer.getCustomer().getAltId());
+        System.out.println(invoiceRepository.findAll());
+        System.out.println("---------------------------------");
+
+
+        Customer.getCustomer().setInvoices(new ArrayList<>());
         return "museums";
     }
 
