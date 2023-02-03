@@ -123,7 +123,7 @@ public class SearchController {
                 .collect(Collectors.toList());
         model.addAttribute("name", artist.getName());
         model.addAttribute("wikiPaintings", paintings);
-        return "paintingsByArtistNew";
+        return "paintingsByArtist";
 
     }
 

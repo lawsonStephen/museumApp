@@ -4,6 +4,7 @@ package com.example.museumApp.controller;
 import com.example.museumApp.dto.OrderDTO;
 import com.example.museumApp.dto.ResponseOrderDTO;
 import com.example.museumApp.model.*;
+import com.example.museumApp.repository.InvoiceRepository;
 import com.example.museumApp.repository.MuseumRepository;
 import com.example.museumApp.service.*;
 import com.example.museumApp.util.DateUtil;
@@ -28,21 +29,31 @@ public class ShoppingCartController {
     private MuseumService museumService;
     private ShoppingCartService shoppingCartService;
 
+    private final InvoiceRepository invoiceRepository;
+
 
 
     public ShoppingCartController(MuseumOrder.MuseumOrderService museumOrderService, CustomerService customerService,
-                                  MuseumRepository museumRepository, MuseumService museumService, ShoppingCartService shoppingCartService) {
+                                  MuseumRepository museumRepository, MuseumService museumService, ShoppingCartService shoppingCartService, InvoiceRepository invoiceRepository) {
         this.museumOrderService = museumOrderService;
         this.customerService = customerService;
         this.museumRepository = museumRepository;
         this.museumService = museumService;
         this.shoppingCartService = shoppingCartService;
+        this.invoiceRepository = invoiceRepository;
     }
     @GetMapping
-    public ModelAndView get(@PathParam("id") Long id) {
-        ModelAndView modelAndView = new ModelAndView("tickets");
+    public ModelAndView get(@PathParam("id") Long id, @ModelAttribute("customer") Customer customer) {
+
+        ModelAndView modelAndView = null;
+        if (customer == null)
+            modelAndView = new ModelAndView("login");
+
+        else
+            modelAndView = new ModelAndView("tickets");
 
         Museum museum = museumService.findById(id);
+
 
         modelAndView.addObject("museum", museum);
 
@@ -81,37 +92,47 @@ public class ShoppingCartController {
             modelAndView.addObject("addMuseumName", museum.getName());
             modelAndView.addObject("addMuseumLocation", museum.getLocation());
             modelAndView.addObject("addTicketNumber", museum.getAvailableQuantity());
-
             modelAndView.addObject("tickets", ticket);
         }
+
+        Customer customer = Customer.getCustomer();
+        Customer customer1 = customerService.findById(customer.getAltId());
+        Invoice invoice = new Invoice();
+        invoice.setCustomer(customer1);
+        invoice.setMuseum(museum.getName());
+        invoice.setQuantity(museum.getAvailableQuantity());
+        invoiceRepository.saveAndFlush(invoice);
+
+        customer.getInvoices().add(invoice);
+
         return modelAndView;
     }
 
-    @PostMapping("/placeOrder")
-    public ResponseEntity<ResponseOrderDTO> placeOrder(){
-        ResponseOrderDTO responseOrderDTO = new ResponseOrderDTO();
-        float amount = museumOrderService.getCartAmount(orderDTO.getCartList());
-
-        Customer customer = new Customer(orderDTO.getCustomerName(), orderDTO.getCustomerEmail());
-        Long customerIdFromDb = customerService.isCustomerPresent(customer); //this may need adjusting
-
-        if (customerIdFromDb !=null) {
-            customer.setId(customerIdFromDb);
-        }
-        else {
-            customer = customerService.saveCustomer(customer);
-            }
-        MuseumOrder museumOrder = new MuseumOrder(orderDTO.getOrderDescription(), customer, orderDTO.getCartList());
-        museumOrder = museumOrderService.saveOrder(museumOrder);
-
-        responseOrderDTO.setAmount(amount);
-        responseOrderDTO.setDate(DateUtil.getCurrentDateTime());
-        responseOrderDTO.setInvoiceNumber(new Random().nextInt(1000));
-        responseOrderDTO.setOrderId(museumOrder.getId());
-        responseOrderDTO.setOrderDescription(orderDTO.getOrderDescription());
-
-        return ResponseEntity.ok(responseOrderDTO);
-        }
+//    @PostMapping("/placeOrder")
+//    public ResponseEntity<ResponseOrderDTO> placeOrder(){
+//        ResponseOrderDTO responseOrderDTO = new ResponseOrderDTO();
+//        float amount = museumOrderService.getCartAmount(orderDTO.getCartList());
+//
+//        Customer customer = new Customer(orderDTO.getCustomerName(), orderDTO.getCustomerEmail());
+//        Long customerIdFromDb = customerService.isCustomerPresent(customer); //this may need adjusting
+//
+//        if (customerIdFromDb !=null) {
+//            customer.setId(customerIdFromDb);
+//        }
+//        else {
+//            customer = customerService.saveCustomer(customer);
+//            }
+//        MuseumOrder museumOrder = new MuseumOrder(orderDTO.getOrderDescription(), customer, orderDTO.getCartList());
+//        museumOrder = museumOrderService.saveOrder(museumOrder);
+//
+//        responseOrderDTO.setAmount(amount);
+//        responseOrderDTO.setDate(DateUtil.getCurrentDateTime());
+//        responseOrderDTO.setInvoiceNumber(new Random().nextInt(1000));
+//        responseOrderDTO.setOrderId(museumOrder.getId());
+//        responseOrderDTO.setOrderDescription(orderDTO.getOrderDescription());
+//
+//        return ResponseEntity.ok(responseOrderDTO);
+//        }
 
     }
 

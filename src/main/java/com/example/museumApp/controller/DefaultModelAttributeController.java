@@ -1,5 +1,6 @@
 package com.example.museumApp.controller;
 
+import com.example.museumApp.model.Customer;
 import com.example.museumApp.model.Museum;
 import com.example.museumApp.model.Sculpture;
 import com.example.museumApp.service.MuseumService;
@@ -41,5 +42,11 @@ public class DefaultModelAttributeController
     public List<Museum> getAllMuseum()
     {
         return museumService.findAll();
+    }
+
+    @ModelAttribute("customer")
+    public Customer activeCustomer()
+    {
+        return Customer.getCustomer();
     }
 }

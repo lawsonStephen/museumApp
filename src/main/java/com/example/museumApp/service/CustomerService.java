@@ -23,4 +23,7 @@ public class CustomerService {
         return customer1 != null ? customer1.getId() : null;
     }
 
+    public Customer findById(Long id) {
+        return customerRepository.findById(id).get();
+    }
 }

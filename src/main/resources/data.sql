@@ -124,6 +124,10 @@ VALUES (default, 'images/paintings/The Starry Night.jpg', 'The Starry Night', 11
         'The School of Athens is a fresco by the Italian Renaissance artist Raphael. The fresco was painted between 1509 and 1511 as a part of Raphael''s commission to decorate the rooms now known as the Stanze di Raffaello, in the Apostolic Palace in the Vatican.');
 
 
+INSERT INTO CUSTOMER VALUES (1,'peter.smith@gmail.com','Peter Smith','peter');
+INSERT INTO CUSTOMER VALUES (2,'helen.stewart@gmail.com', 'Helen Stewart','helen');
+INSERT INTO CUSTOMER VALUES (3,'nicole.jackson@gmail.com', 'Nicole Jackson','nicole');
+INSERT INTO CUSTOMER VALUES (4,'richard.gibson@gmail.com','Richard Gibson', 'richard');
 
 
 
