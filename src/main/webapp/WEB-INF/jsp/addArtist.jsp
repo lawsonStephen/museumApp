@@ -12,7 +12,6 @@
     <title>Artist</title>
 
     <style>
-
         img {
             width: 320px;
             height: 160px;
