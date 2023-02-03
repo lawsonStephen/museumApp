@@ -50,5 +50,14 @@ type Query {
     sculptureByName(name: String): [Sculpture]
 }
 
+input ExchangeInput {
+    sculptureName: String!
+    museumName: String!
+}
+
+type Mutation {
+    sendSculptureToMuseum(exInput: ExchangeInput): Sculpture!
+}
+
 
 

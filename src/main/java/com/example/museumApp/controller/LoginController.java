@@ -67,14 +67,7 @@ public class LoginController
     @GetMapping("pay")
     public String checkout()
     {
-        System.out.println("--------------------------------");
-        System.out.println(invoiceRepository.findAll());
-//        Customer.getCustomer().getInvoices().forEach(invoiceRepository::delete);
         invoiceRepository.deleteByCustomerId(Customer.getCustomer().getAltId());
-        System.out.println(invoiceRepository.findAll());
-        System.out.println("---------------------------------");
-
-
         Customer.getCustomer().setInvoices(new ArrayList<>());
         return "museums";
     }
